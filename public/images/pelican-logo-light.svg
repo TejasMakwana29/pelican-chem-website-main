@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 140" fill="none" role="img" aria-label="Pelican Chem">
+  <defs>
+    <linearGradient id="hexFillLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="45%" stop-color="#D5DEEA"/>
+      <stop offset="100%" stop-color="#A8B4C4"/>
+    </linearGradient>
+    <linearGradient id="pFillLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7DD3FC"/>
+      <stop offset="100%" stop-color="#1E6FD9"/>
+    </linearGradient>
+    <linearGradient id="wordFillLight" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#BAE6FD"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="arcFillLight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7DD3FC" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#7DD3FC"/>
+      <stop offset="100%" stop-color="#7DD3FC" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(52 4)">
+    <path
+      d="M48 4 L84 24.8 V65.2 L48 86 L12 65.2 V24.8 Z"
+      fill="url(#hexFillLight)"
+      stroke="#FFFFFF"
+      stroke-width="2"
+    />
+    <path
+      d="M30 24 H54 C62.8 24 69 29.8 69 38 C69 46.2 62.8 52 54 52 H42 V66 H30 Z M42 33 V43 H53 C56.6 43 59 41 59 38 C59 35 56.6 33 53 33 Z"
+      fill="url(#pFillLight)"
+    />
+    <g transform="translate(46 40)">
+      <path d="M0 7 L7 2.5 L14 7 L7 11.5 Z" fill="#E0F2FE"/>
+      <path d="M7 2.5 L7 11.5 L14 7 L7 2.5" fill="#BAE6FD"/>
+      <path d="M0 7 L7 11.5 L7 2.5 L0 7" fill="#7DD3FC"/>
+    </g>
+  </g>
+
+  <text
+    x="100"
+    y="118"
+    text-anchor="middle"
+    fill="url(#wordFillLight)"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="28"
+    font-weight="700"
+  >
+    Pelican
+  </text>
+  <path
+    d="M44 128 Q100 138 156 128"
+    stroke="url(#arcFillLight)"
+    stroke-width="2"
+    fill="none"
+    stroke-linecap="round"
+  />
+</svg>

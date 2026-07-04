@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 86" fill="none" role="img" aria-label="Pelican Chem mark">
+  <defs>
+    <linearGradient id="markHexFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8EEF5"/>
+      <stop offset="45%" stop-color="#B8C4D4"/>
+      <stop offset="100%" stop-color="#8A98AA"/>
+    </linearGradient>
+    <linearGradient id="markPFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E6FD9"/>
+      <stop offset="100%" stop-color="#0A3A7A"/>
+    </linearGradient>
+  </defs>
+  <path
+    d="M48 4 L84 24.8 V65.2 L48 86 L12 65.2 V24.8 Z"
+    fill="url(#markHexFill)"
+    stroke="#FFFFFF"
+    stroke-width="2"
+  />
+  <path
+    d="M30 24 H54 C62.8 24 69 29.8 69 38 C69 46.2 62.8 52 54 52 H42 V66 H30 Z M42 33 V43 H53 C56.6 43 59 41 59 38 C59 35 56.6 33 53 33 Z"
+    fill="url(#markPFill)"
+  />
+  <g transform="translate(46 40)">
+    <path d="M0 7 L7 2.5 L14 7 L7 11.5 Z" fill="#7DD3FC"/>
+    <path d="M7 2.5 L7 11.5 L14 7 L7 2.5" fill="#38BDF8"/>
+    <path d="M0 7 L7 11.5 L7 2.5 L0 7" fill="#0EA5E9"/>
+  </g>
+</svg>
