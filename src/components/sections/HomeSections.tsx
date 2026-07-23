@@ -4,9 +4,7 @@ import { ArrowRight, Calendar, Shield, Wrench, Settings, CheckCircle2 } from "lu
 import type { ReactNode } from "react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { StatsGrid } from "@/components/ui/AnimatedCounter";
-import { ContactCTA } from "@/components/ui/Forms";
-import { company, whyChooseUs, strengths, stats, roHighlights } from "@/data/company";
-import { featuredProducts } from "@/data/products";
+import { company, strengths, stats, roHighlights } from "@/data/company";
 import { industries } from "@/data/industries";
 
 const iconMap: Record<string, ReactNode> = {
@@ -59,12 +57,12 @@ export function HeroSection() {
           </FadeIn>
           <FadeIn delay={0.3}>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <Link href="/products" className="btn-primary">
-                Explore Products
+              <Link href="#quote" className="btn-primary">
+                Request Quote
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
-              <Link href="/contact" className="btn-secondary">
-                Request Quote
+              <Link href="/about" className="btn-secondary">
+                Learn More
               </Link>
             </div>
           </FadeIn>
@@ -109,85 +107,72 @@ export function AboutPreview() {
   );
 }
 
-export function WhyChooseUsSection() {
+export function CoreCategoriesSection() {
   return (
     <section className="section-padding bg-slate-50">
       <div className="container-wide">
         <FadeIn className="text-center">
-          <p className="text-label">Why Choose Us</p>
-          <h2 className="heading-section mx-auto mt-4 max-w-3xl text-balance">
-            Excellence in Every Formulation
-          </h2>
+          <p className="text-label">Our Solutions</p>
+          <h2 className="heading-section mt-4">Our Core Chemical Categories</h2>
         </FadeIn>
+
         <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {whyChooseUs.map((item, index) => (
-            <FadeIn key={item.title} delay={index * 0.1}>
-              <div className="card-hover rounded-2xl bg-white p-8 shadow-sm">
-                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-aqua-50 text-aqua">
-                  {iconMap[item.icon]}
-                </div>
-                <h3 className="heading-sub">{item.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-slate-600">
-                  {item.description}
+          <FadeIn delay={0.1}>
+            <div className="card-hover flex h-full flex-col rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-100">
+              <h3 className="heading-sub mb-4">RO Membrane Performance</h3>
+              <div className="mb-8 flex-grow">
+                <p className="mb-2 text-sm font-semibold text-slate-900">Highlights:</p>
+                <p className="text-sm leading-relaxed text-slate-600">
+                  Antiscalants (Pelican-301, Pelican-309), Membrane Cleaners, and Biocides.
                 </p>
               </div>
-            </FadeIn>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+            </div>
+          </FadeIn>
 
-export function FeaturedProductsSection() {
-  return (
-    <section className="section-padding bg-white">
-      <div className="container-wide">
-        <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
-          <FadeIn>
-            <p className="text-label">Our Products</p>
-            <h2 className="heading-section mt-4">Featured Products</h2>
-          </FadeIn>
-          <FadeIn delay={0.1}>
-            <Link href="/products" className="btn-outline">
-              View All Products
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </FadeIn>
-        </div>
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {featuredProducts.map((product, index) => (
-            <FadeIn key={product.slug} delay={index * 0.08}>
-              <Link
-                href={`/products/${product.categorySlug}/${product.slug}`}
-                className="group card-hover block overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-100"
-              >
-                <div className="relative aspect-[16/10] overflow-hidden">
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                  {product.code && (
-                    <span className="absolute left-4 top-4 rounded-full bg-navy/80 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">
-                      {product.code}
-                    </span>
-                  )}
-                </div>
-                <div className="p-6">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-aqua">
-                    {product.category}
-                  </p>
-                  <h3 className="heading-sub mt-2 group-hover:text-aqua">{product.name}</h3>
-                  <p className="mt-2 line-clamp-2 text-sm text-slate-600">
-                    {product.shortDescription}
-                  </p>
-                </div>
+          <FadeIn delay={0.2}>
+            <div className="card-hover flex h-full flex-col rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-100">
+              <h3 className="heading-sub mb-4">Boiler, Chiller & Cooling Tower</h3>
+              <div className="mb-8 flex-grow">
+                <p className="mb-2 text-sm font-semibold text-slate-900">Highlights:</p>
+                <p className="text-sm leading-relaxed text-slate-600">
+                  Chiller Scaling Problem Solvers, Scale & Corrosion Inhibitors, Oxygen Scavengers, and Biocides to maximize equipment lifespan.
+                </p>
+              </div>
+              <Link href="/products" className="mt-auto inline-flex items-center font-semibold text-aqua hover:text-navy transition-colors">
+                View Thermal Solutions <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
-            </FadeIn>
-          ))}
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.3}>
+            <div className="card-hover flex h-full flex-col rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-100">
+              <h3 className="heading-sub mb-4">Specialty & Heavy Industrial</h3>
+              <div className="mb-8 flex-grow">
+                <p className="mb-2 text-sm font-semibold text-slate-900">Highlights:</p>
+                <p className="text-sm leading-relaxed text-slate-600">
+                  High-purity EDTA (Diammonium / Tetrasodium) and customized industrial blending.
+                </p>
+              </div>
+              <Link href="/products" className="mt-auto inline-flex items-center font-semibold text-aqua hover:text-navy transition-colors">
+                View Specialty Chemicals <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.4}>
+            <div className="card-hover flex h-full flex-col rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-100">
+              <h3 className="heading-sub mb-4">Wastewater & ETP Formulations</h3>
+              <div className="mb-8 flex-grow">
+                <p className="mb-2 text-sm font-semibold text-slate-900">Highlights:</p>
+                <p className="text-sm leading-relaxed text-slate-600">
+                  Coagulants, Flocculants, Decolorizing agents, and pH adjusters for industrial effluents.
+                </p>
+              </div>
+              <Link href="/products" className="mt-auto inline-flex items-center font-semibold text-aqua hover:text-navy transition-colors">
+                View ETP Solutions <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
+          </FadeIn>
         </div>
       </div>
     </section>
@@ -286,6 +271,111 @@ export function StrengthsSection() {
   );
 }
 
+export function B2BCapabilitiesSection() {
+  return (
+    <section className="section-padding bg-white border-y border-slate-100">
+      <div className="container-wide">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+          
+          <FadeIn direction="left">
+            <div className="card-hover h-full rounded-3xl bg-slate-50 p-8 md:p-10 ring-1 ring-slate-100 flex flex-col">
+              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-aqua-50 text-aqua">
+                <svg className="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <h3 className="heading-sub text-2xl mb-4">
+                Private Label & White Label Manufacturing (OEM)
+              </h3>
+              <p className="text-body mb-8 flex-grow">
+                Launch your own brand of water treatment chemicals. We offer premium white-label manufacturing with your custom branding, strict quality assurance, and bulk packaging options from 25Kg cans to 200L drums.
+              </p>
+              <Link href="/contact" className="btn-outline inline-flex w-fit">
+                Inquire About Private Labeling
+              </Link>
+            </div>
+          </FadeIn>
+
+          <FadeIn direction="right">
+            <div className="card-hover h-full rounded-3xl bg-slate-50 p-8 md:p-10 ring-1 ring-slate-100 flex flex-col">
+              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-aqua-50 text-aqua">
+                <svg className="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <h3 className="heading-sub text-2xl mb-4">
+                Turnkey Water & Sewage Treatment Plants (EPC)
+              </h3>
+              <p className="text-body mb-8 flex-grow">
+                Beyond chemicals, we design, manufacture, and commission complete RO Plants, Effluent Treatment Plants (ETP), and Sewage Treatment Plants (STP) tailored to your factory's specific flow rates and input water quality.
+              </p>
+              <Link href="/contact" className="btn-primary inline-flex w-fit">
+                Get Plant Specifications
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
+          </FadeIn>
+
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function WhyChooseUsSection() {
+  return (
+    <section className="section-padding bg-navy text-white">
+      <div className="container-wide">
+        <FadeIn className="text-center">
+          <h2 className="heading-section text-white mt-4">
+            Why Plant Managers Choose Pelican Chemical
+          </h2>
+          <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-aqua"></div>
+        </FadeIn>
+
+        <div className="mt-16 grid gap-12 text-center md:grid-cols-3">
+          <FadeIn delay={0.1}>
+            <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur-sm">
+              <svg className="h-10 w-10 text-aqua" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h4 className="font-display text-xl font-semibold mb-4">Consistent Chemical Purity</h4>
+            <p className="text-slate-300 leading-relaxed text-sm">
+              Every batch undergoes rigorous internal lab testing to ensure precise active ingredient percentages before it leaves our facility.
+            </p>
+          </FadeIn>
+
+          <FadeIn delay={0.2}>
+            <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur-sm">
+              <svg className="h-10 w-10 text-aqua" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h4 className="font-display text-xl font-semibold mb-4">Membrane Life Extension</h4>
+            <p className="text-slate-300 leading-relaxed text-sm">
+              Our advanced anti-precipitant formulas are engineered to reduce clean-in-place (CIP) frequency and extend membrane life by up to 40%.
+            </p>
+          </FadeIn>
+
+          <FadeIn delay={0.3}>
+            <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-white/5 ring-1 ring-white/10 backdrop-blur-sm">
+              <svg className="h-10 w-10 text-aqua" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h4 className="font-display text-xl font-semibold mb-4">Direct-from-Manufacturer Pricing</h4>
+            <p className="text-slate-300 leading-relaxed text-sm">
+              Eliminate trading margins. Source directly from our manufacturing facility in Rajkot for highly competitive contract pricing.
+            </p>
+          </FadeIn>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function TrustSection() {
   return (
     <section className="section-padding bg-slate-50">
@@ -309,38 +399,62 @@ export function TrustSection() {
   );
 }
 
-export function CustomLabelBanner() {
+export function RFQSection() {
   return (
-    <section className="section-padding bg-white">
-      <div className="container-wide">
+    <section className="section-padding bg-slate-50" id="quote">
+      <div className="container-wide max-w-4xl">
         <FadeIn>
-          <div className="relative overflow-hidden rounded-3xl bg-navy">
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1565008576549-57569a49371d?w=1200&q=80')] bg-cover bg-center opacity-20" />
-            <div className="relative grid items-center gap-8 p-10 md:p-16 lg:grid-cols-2">
-              <div>
-                <p className="text-label text-aqua-300">Own Label Solutions</p>
-                <h2 className="heading-section mt-4 text-white text-balance">
-                  Own Label RO Chemicals
-                </h2>
-                <p className="mt-6 text-body text-slate-300">
-                  We can supply you with our Reverse Osmosis chemicals with your own label
-                  on the drum. If you are a water treatment service company, specialist RO
-                  plant manufacturer, or FM company looking to increase your added value,
-                  contact us — we can help you.
-                </p>
-              </div>
-              <div className="flex justify-start lg:justify-end">
-                <Link href="/custom-label" className="btn-primary">
-                  Learn About Custom Label
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </div>
+          <div className="rounded-3xl bg-white p-8 md:p-14 shadow-xl ring-1 ring-slate-100">
+            <div className="mb-10 text-center">
+              <h2 className="heading-section mb-4">Request a Quote</h2>
+              <p className="text-body text-lg">Provide your requirements for contract pricing and bulk orders.</p>
             </div>
+            
+            <form className="space-y-6">
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                <div>
+                  <label className="mb-2 block text-sm font-semibold text-slate-700">Full Name <span className="text-red-500">*</span></label>
+                  <input type="text" className="w-full rounded-xl border border-slate-200 bg-slate-50 px-5 py-4 outline-none transition-all focus:border-aqua focus:bg-white focus:ring-4 focus:ring-aqua/10" placeholder="John Doe" required />
+                </div>
+                <div>
+                  <label className="mb-2 block text-sm font-semibold text-slate-700">Company Name <span className="text-red-500">*</span></label>
+                  <input type="text" className="w-full rounded-xl border border-slate-200 bg-slate-50 px-5 py-4 outline-none transition-all focus:border-aqua focus:bg-white focus:ring-4 focus:ring-aqua/10" placeholder="Acme Industries" required />
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                <div>
+                  <label className="mb-2 block text-sm font-semibold text-slate-700">Email Address <span className="text-red-500">*</span></label>
+                  <input type="email" className="w-full rounded-xl border border-slate-200 bg-slate-50 px-5 py-4 outline-none transition-all focus:border-aqua focus:bg-white focus:ring-4 focus:ring-aqua/10" placeholder="john@company.com" required />
+                </div>
+                <div>
+                  <label className="mb-2 block text-sm font-semibold text-slate-700">Phone Number</label>
+                  <input type="tel" className="w-full rounded-xl border border-slate-200 bg-slate-50 px-5 py-4 outline-none transition-all focus:border-aqua focus:bg-white focus:ring-4 focus:ring-aqua/10" placeholder="+91 XXXX XXXXX" />
+                </div>
+              </div>
+
+              <div>
+                <label className="mb-2 block text-sm font-semibold text-slate-700">Requirement Type</label>
+                <select className="w-full appearance-none rounded-xl border border-slate-200 bg-slate-50 px-5 py-4 outline-none transition-all focus:border-aqua focus:bg-white focus:ring-4 focus:ring-aqua/10">
+                  <option>Bulk Chemical Supply</option>
+                  <option>Private Label (OEM)</option>
+                  <option>Turnkey Plant (EPC)</option>
+                  <option>Technical Consultation</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="mb-2 block text-sm font-semibold text-slate-700">Requirement Details & Monthly Volume <span className="text-red-500">*</span></label>
+                <textarea rows={5} className="w-full resize-none rounded-xl border border-slate-200 bg-slate-50 px-5 py-4 outline-none transition-all focus:border-aqua focus:bg-white focus:ring-4 focus:ring-aqua/10" placeholder="Please describe your specific requirements, flow rates, or chemical volumes..." required></textarea>
+              </div>
+
+              <button type="submit" className="btn-primary mt-4 w-full justify-center py-4 text-lg">
+                Submit RFQ
+              </button>
+            </form>
           </div>
         </FadeIn>
       </div>
     </section>
   );
 }
-
-export { ContactCTA };

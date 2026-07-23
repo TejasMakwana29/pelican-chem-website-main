@@ -19,8 +19,9 @@ export const navigation: NavItem[] = [
       { label: "Cooling Tower Chemicals", href: "/products/cooling-tower-chemicals" },
     ],
   },
+  { label: "Application", href: "/application" },
   { label: "Industries", href: "/industries" },
-{ label: "Case Studies", href: "/case-studies" },
+  { label: "Case Studies", href: "/case-studies" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -34,6 +35,7 @@ export const sitemap = [
   { path: "/products/boiler-chemicals", title: "Boiler Chemicals", priority: 0.8 },
   { path: "/products/edta-chemicals", title: "EDTA Chemicals", priority: 0.8 },
   { path: "/products/cooling-tower-chemicals", title: "Cooling Tower Chemicals", priority: 0.8 },
+  { path: "/application", title: "Application", priority: 0.8 },
   { path: "/industries", title: "Industries We Serve", priority: 0.8 },
   { path: "/custom-label", title: "Custom Label Solutions", priority: 0.7 },
   { path: "/quality", title: "Quality & Manufacturing", priority: 0.7 },
