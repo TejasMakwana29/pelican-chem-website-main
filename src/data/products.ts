@@ -10,6 +10,7 @@ export interface Product {
   applications: string[];
   technicalHighlights: string[];
   image: string;
+  specifications?: { property: string; specification: string }[];
 }
 
 export interface ProductCategory {
@@ -99,6 +100,13 @@ export const products: Product[] = [
       "Effective against multiple scale-forming minerals",
       "Low dose rate requirement",
       "Compatible with polyamide and cellulose acetate membranes",
+    ],
+    specifications: [
+      { property: "Appearance", specification: "Colorless to Pale Yellow Liquid" },
+      { property: "pH", specification: "10 – 12" },
+      { property: "Water Solubility", specification: "Completely Soluble" },
+      { property: "Solid Content", specification: "33–34% w/w" },
+      { property: "Specific Gravity", specification: "1.35–1.45" }
     ],
     image:
       "https://images.unsplash.com/photo-1581093458791-9f3023e2d2b8?w=800&q=80",
@@ -196,6 +204,13 @@ export const products: Product[] = [
       "Low dose effectiveness",
       "Compatible with polyamide membranes",
     ],
+    specifications: [
+      { property: "Appearance", specification: "Colorless to White Slightly Viscous Liquid" },
+      { property: "pH", specification: "3.5 – 4.5" },
+      { property: "Water Solubility", specification: "Completely Soluble" },
+      { property: "Solid Content", specification: "33–34% w/w" },
+      { property: "Specific Gravity", specification: "1.17–1.23" }
+    ],
     image:
       "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
   },
@@ -259,6 +274,12 @@ export const products: Product[] = [
       "Low dose rate in SWRO conditions",
       "Compatible with SWRO pretreatment systems",
     ],
+    specifications: [
+      { property: "Appearance", specification: "Colorless to White Liquid" },
+      { property: "Water Solubility", specification: "Completely Soluble" },
+      { property: "Solid Content", specification: "33–34% w/w" },
+      { property: "Specific Gravity", specification: "1.17–1.23" }
+    ],
     image:
       "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80",
   },
@@ -290,6 +311,13 @@ export const products: Product[] = [
       "Effective across varied effluent compositions",
       "Stable formulation for consistent dosing",
       "Documented application guidelines",
+    ],
+    specifications: [
+      { property: "Appearance", specification: "Colorless to Off-White Slightly Viscous Liquid" },
+      { property: "pH", specification: "3.0 – 5.0" },
+      { property: "Water Solubility", specification: "Infinite" },
+      { property: "Solid Content", specification: "Minimum 50%" },
+      { property: "Viscosity", specification: "Approximately 30–130 cPs" }
     ],
     image:
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
