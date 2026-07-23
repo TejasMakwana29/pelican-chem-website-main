@@ -4,7 +4,7 @@ import {
   AboutPreview,
 } from "@/components/sections/HomeSections";
 import Link from "next/link";
-import { FlaskConical, Factory, ShieldCheck, Zap, Building2, ArrowRight } from "lucide-react";
+import { ShieldCheck, Zap, Building2 } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -99,7 +99,7 @@ export default function HomePage() {
             <div className="bg-gray-50 p-10 rounded-3xl border border-gray-200">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Turnkey Water & Sewage Treatment Plants (EPC)</h3>
               <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-                Beyond chemicals, we design, manufacture, and commission complete RO Plants, Effluent Treatment Plants (ETP), and Sewage Treatment Plants (STP) tailored to your factory{'\''}s specific flow rates and input water quality.
+                Beyond chemicals, we design, manufacture, and commission complete RO Plants, Effluent Treatment Plants (ETP), and Sewage Treatment Plants (STP) tailored to your factory&apos;s specific flow rates and input water quality.
               </p>
               <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-colors">
                 Get Plant Specifications
@@ -141,7 +141,7 @@ export default function HomePage() {
       <section className="py-24 bg-gray-900 text-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-6">Why Plant Manager{'\''}s Choose Pelican Chemical</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-6">Why Plant Managers Choose Pelican Chemical</h2>
             <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
