@@ -7,13 +7,6 @@ import { StatsGrid } from "@/components/ui/AnimatedCounter";
 import { company, strengths, stats, roHighlights } from "@/data/company";
 import { industries } from "@/data/industries";
 
-const iconMap: Record<string, ReactNode> = {
-  calendar: <Calendar className="h-7 w-7" />,
-  shield: <Shield className="h-7 w-7" />,
-  expertise: <Wrench className="h-7 w-7" />,
-  customize: <Settings className="h-7 w-7" />,
-};
-
 export function HeroSection() {
   return (
     <section className="relative flex min-h-[90vh] items-center overflow-hidden">
@@ -329,7 +322,7 @@ export function WhyChooseUsSection() {
       <div className="container-wide">
         <FadeIn className="text-center">
           <h2 className="heading-section text-white mt-4">
-            Why Plant Managers Choose Pelican Chemical
+            Why Plant Manager&apos;s Choose Pelican Chemical
           </h2>
           <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-aqua"></div>
         </FadeIn>
