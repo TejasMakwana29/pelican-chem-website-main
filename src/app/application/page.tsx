@@ -75,7 +75,8 @@ export default function ApplicationPage() {
         <section>
           <div className="flex items-center gap-4 mb-6">
             <div className="bg-blue-100 p-3 rounded-lg"><Tag className="w-6 h-6 text-blue-600" /></div>
-<h2 className="text-3xl font-bold text-gray-900">3. Private Label Services (&quot;Own Label&quot;)</h2>
+            <h2 className="text-3xl font-bold text-gray-900">3. Private Label Services (&quot;Own Label&quot;)</h2>
+          </div>
           <p className="text-lg text-gray-600 leading-relaxed mb-8 max-w-4xl">
             This is a core competitive advantage for Pelican Chemical. Giving it a prominent spot in the Mega Menu attracts B2B partners, service companies, and plant manufacturers.
           </p>
