@@ -39,10 +39,23 @@ export function HeroSection() {
             </h1>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-slate-200 md:text-xl">
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-200 md:text-xl">
               With over 14 years of expertise, Pelican Chemical provides high-quality RO chemicals that maximize efficiency, extend membrane life, and ensure consistent water quality.
-              {company.established}.
             </p>
+            <ul className="mt-8 space-y-3 text-sm font-medium text-slate-200 md:text-base">
+              <li className="flex items-center gap-3">
+                <span className="text-aqua">🏭</span> State-of-the-Art Production Facility in Rajkot, Jalna, Ahmedabad, Banglore
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="text-aqua">📦</span> Custom / Private Labeling (OEM) Available
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="text-aqua">🚛</span> Pan-India Supply & Prompt Delivery
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="text-aqua">📞</span> 24/7 Support on call
+              </li>
+            </ul>
           </FadeIn>
           <FadeIn delay={0.3}>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">

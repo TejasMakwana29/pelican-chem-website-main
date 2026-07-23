@@ -123,6 +123,31 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 </div>
               </FadeIn>
 
+              {/* New Specifications Table Block */}
+              {product.specifications && (
+                <FadeIn delay={0.35} className="mt-12">
+                  <h3 className="heading-sub">Product Specifications</h3>
+                  <div className="mt-6 overflow-hidden rounded-2xl border border-slate-200 bg-white">
+                    <table className="w-full text-left text-sm text-slate-700">
+                      <thead className="bg-slate-50 font-semibold text-navy">
+                        <tr>
+                          <th className="px-6 py-4">Property</th>
+                          <th className="px-6 py-4">Specification</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-slate-200">
+                        {product.specifications.map((spec) => (
+                          <tr key={spec.property} className="hover:bg-slate-50/50">
+                            <td className="px-6 py-4 font-medium">{spec.property}</td>
+                            <td className="px-6 py-4">{spec.specification}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </FadeIn>
+              )}
+
               <FadeIn delay={0.4} className="mt-8">
                 <DatasheetButton productName={displayName} />
               </FadeIn>

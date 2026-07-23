@@ -5,16 +5,14 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    color-scheme: dark;
+    color-scheme: light;
   }
-
   body {
-    /* Pure black background with light grey text for readability */
-    @apply bg-[#050505] text-slate-300 antialiased;
+    /* White background with dark grey text for perfect readability */
+    @apply bg-white text-slate-600 antialiased;
   }
-
   ::selection {
-    @apply bg-aqua/30 text-white;
+    @apply bg-aqua/30 text-navy;
   }
 }
 
@@ -22,48 +20,44 @@
   .section-padding {
     @apply px-6 py-20 md:px-8 lg:px-16 lg:py-28;
   }
-
   .container-wide {
     @apply mx-auto max-w-7xl;
   }
-
+  
+  /* Typography updated for light backgrounds */
   .heading-display {
-    @apply font-display text-4xl font-semibold tracking-tight text-white md:text-5xl lg:text-6xl;
+    @apply font-display text-4xl font-semibold tracking-tight text-navy md:text-5xl lg:text-6xl;
   }
-
   .heading-section {
-    @apply font-display text-3xl font-semibold tracking-tight text-white md:text-4xl lg:text-5xl;
+    @apply font-display text-3xl font-semibold tracking-tight text-navy md:text-4xl lg:text-5xl;
   }
-
   .heading-sub {
-    @apply font-display text-xl font-semibold text-slate-100 md:text-2xl;
+    @apply font-display text-xl font-semibold text-navy md:text-2xl;
   }
-
   .text-body {
-    @apply text-base leading-relaxed text-slate-400 md:text-lg;
+    @apply text-base leading-relaxed text-slate-600 md:text-lg;
   }
-
   .text-label {
     @apply text-sm font-semibold uppercase tracking-widest text-aqua;
   }
 
+  /* Buttons updated for proper contrast */
   .btn-primary {
     @apply inline-flex items-center justify-center rounded-full bg-aqua px-8 py-4 text-sm font-semibold uppercase tracking-wider text-white transition-all duration-300 hover:bg-aqua-600 hover:shadow-lg hover:shadow-aqua/25;
   }
-
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-full border-2 border-white/20 bg-white/5 px-8 py-4 text-sm font-semibold uppercase tracking-wider text-white backdrop-blur-sm transition-all duration-300 hover:border-white hover:bg-white hover:text-black;
+    @apply inline-flex items-center justify-center rounded-full border-2 border-white/20 bg-white/5 px-8 py-4 text-sm font-semibold uppercase tracking-wider text-white backdrop-blur-sm transition-all duration-300 hover:border-white hover:bg-white hover:text-navy;
   }
-
   .btn-outline {
-    @apply inline-flex items-center justify-center rounded-full border-2 border-white px-8 py-4 text-sm font-semibold uppercase tracking-wider text-white transition-all duration-300 hover:bg-white hover:text-black;
+    @apply inline-flex items-center justify-center rounded-full border-2 border-navy px-8 py-4 text-sm font-semibold uppercase tracking-wider text-navy transition-all duration-300 hover:bg-navy hover:text-white;
   }
-
+  
+  /* Card hover effects fixed so it doesn't force a black background */
   .card-hover {
-    @apply bg-[#0A0A0A] border border-white/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-aqua/10 hover:border-white/20 rounded-2xl;
+    @apply transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-aqua/10;
   }
-
+  
   .gradient-overlay {
-    @apply absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-transparent;
+    @apply absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-transparent;
   }
 }

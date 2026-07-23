@@ -1,3 +1,4 @@
+import { FormulationFinder } from "@/components/ui/FormulationFinder";
 import {
   HeroSection,
   AboutPreview,
@@ -22,6 +23,8 @@ export default function HomePage() {
       <TrustSection />
       <CustomLabelBanner />
       <ContactCTA />
+      <FormulationFinder />
+
     </>
   );
 }

@@ -20,8 +20,7 @@ export const navigation: NavItem[] = [
     ],
   },
   { label: "Industries", href: "/industries" },
-  { label: "Custom Label", href: "/custom-label" },
-  { label: "Quality", href: "/quality" },
+{ label: "Case Studies", href: "/case-studies" },
   { label: "Contact", href: "/contact" },
 ];
 
