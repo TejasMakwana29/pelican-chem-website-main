@@ -322,7 +322,7 @@ export function WhyChooseUsSection() {
       <div className="container-wide">
         <FadeIn className="text-center">
           <h2 className="heading-section text-white mt-4">
-            Why Plant Manager&apos;s Choose Pelican Chemical
+            Why Plant Managers Choose Pelican Chemical
           </h2>
           <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-aqua"></div>
         </FadeIn>
