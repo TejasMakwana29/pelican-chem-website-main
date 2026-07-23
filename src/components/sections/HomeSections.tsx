@@ -301,7 +301,7 @@ export function B2BCapabilitiesSection() {
                 Turnkey Water & Sewage Treatment Plants (EPC)
               </h3>
               <p className="text-body mb-8 flex-grow">
-                Beyond chemicals, we design, manufacture, and commission complete RO Plants, Effluent Treatment Plants (ETP), and Sewage Treatment Plants (STP) tailored to your factory's specific flow rates and input water quality.
+                Beyond chemicals, we design, manufacture, and commission complete RO Plants, Effluent Treatment Plants (ETP), and Sewage Treatment Plants (STP) tailored to your factory specific flow rates and input water quality.
               </p>
               <Link href="/contact" className="btn-primary inline-flex w-fit">
                 Get Plant Specifications
