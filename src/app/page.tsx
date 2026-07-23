@@ -141,7 +141,7 @@ export default function HomePage() {
       <section className="py-24 bg-gray-900 text-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-6">Why Plant Managers Choose Pelican Chemical</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-6">Why Plant Managers  Choose Pelican Chemical</h2>
             <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
