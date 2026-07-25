@@ -61,18 +61,22 @@ export function InquiryForm({ productName, compact = false }: InquiryFormProps) 
           />
         </div>
       </div>
+      
+      {/* PHONE FIELD UPDATED TO BE MANDATORY */}
       <div>
         <label htmlFor="phone" className="mb-2 block text-sm font-medium text-navy">
-          Phone
+          Phone *
         </label>
         <input
           type="tel"
           id="phone"
           name="phone"
+          required
           className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-navy transition-colors focus:border-aqua focus:outline-none focus:ring-2 focus:ring-aqua/20"
           placeholder="+91 XXXXX XXXXX"
         />
       </div>
+
       {productName && (
         <div>
           <label htmlFor="product-display" className="mb-2 block text-sm font-medium text-navy">
