@@ -1,7 +1,6 @@
 import { FormulationFinder } from "@/components/ui/FormulationFinder";
 import {
   HeroSection,
-  AboutPreview,
 } from "@/components/sections/HomeSections";
 import Link from "next/link";
 import { ShieldCheck, Zap, Building2 } from "lucide-react";
