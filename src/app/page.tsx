@@ -15,10 +15,7 @@ export default function HomePage() {
       {/* 2. Formulation Finder */}
       <FormulationFinder />
 
-      {/* 3. About Preview */}
-      <AboutPreview />
-
-      {/* 4. Our Core Chemical Categories */}
+            {/* 4. Our Core Chemical Categories */}
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
