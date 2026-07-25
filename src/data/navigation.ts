@@ -6,9 +6,8 @@ export interface NavItem {
 
 export const navigation: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
   {
-    label: "Products",
+    label: "Our Products",
     href: "/products",
     children: [
       { label: "RO Chemicals", href: "/products/ro-chemicals" },
@@ -19,25 +18,27 @@ export const navigation: NavItem[] = [
       { label: "Cooling Tower Chemicals", href: "/products/cooling-tower-chemicals" },
     ],
   },
-  { label: "Application", href: "/application" },
   { label: "Industries", href: "/industries" },
-  { label: "Case Studies", href: "/case-studies" },
+  { label: "Case Study", href: "/case-studies" },
+  { label: "About Us", href: "/about" },
   { label: "Contact", href: "/contact" },
+  { label: "Application", href: "/application" },
 ];
 
 export const sitemap = [
   { path: "/", title: "Home", priority: 1.0 },
-  { path: "/about", title: "About Us", priority: 0.9 },
-  { path: "/products", title: "Products", priority: 0.9 },
+  { path: "/products", title: "Our Products", priority: 0.9 },
   { path: "/products/ro-chemicals", title: "RO Chemicals", priority: 0.8 },
   { path: "/products/sea-water-ro-chemicals", title: "Sea Water RO Chemicals", priority: 0.8 },
   { path: "/products/etp-chemicals", title: "ETP Chemicals", priority: 0.8 },
   { path: "/products/boiler-chemicals", title: "Boiler Chemicals", priority: 0.8 },
   { path: "/products/edta-chemicals", title: "EDTA Chemicals", priority: 0.8 },
   { path: "/products/cooling-tower-chemicals", title: "Cooling Tower Chemicals", priority: 0.8 },
-  { path: "/application", title: "Application", priority: 0.8 },
   { path: "/industries", title: "Industries We Serve", priority: 0.8 },
+  { path: "/case-studies", title: "Case Studies", priority: 0.8 },
+  { path: "/about", title: "About Us", priority: 0.9 },
+  { path: "/contact", title: "Contact", priority: 0.8 },
+  { path: "/application", title: "Application", priority: 0.8 },
   { path: "/custom-label", title: "Custom Label Solutions", priority: 0.7 },
   { path: "/quality", title: "Quality & Manufacturing", priority: 0.7 },
-  { path: "/contact", title: "Contact", priority: 0.8 },
 ];

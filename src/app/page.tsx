@@ -15,7 +15,7 @@ export default function HomePage() {
       {/* 2. Formulation Finder */}
       <FormulationFinder />
 
-            {/* 4. Our Core Chemical Categories */}
+      {/* 4. Our Core Chemical Categories */}
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
@@ -96,7 +96,7 @@ export default function HomePage() {
             <div className="bg-gray-50 p-10 rounded-3xl border border-gray-200">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Turnkey Water & Sewage Treatment Plants (EPC)</h3>
               <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-                Beyond chemicals, we design, manufacture, and commission complete RO Plants, Effluent Treatment Plants (ETP), and Sewage Treatment Plants (STP) tailored to your factory specific flow rates and input water quality.
+                Beyond chemicals, we design, manufacture, and commission complete RO Plants, Effluent Treatment Plants (ETP), and Sewage Treatment Plants (STP) tailored to your factory&apos;s specific flow rates and input water quality.
               </p>
               <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-colors">
                 Get Plant Specifications
@@ -138,10 +138,11 @@ export default function HomePage() {
       <section className="py-24 bg-gray-900 text-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-6">Why Plant Managers  Choose Pelican Chemical</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-6">Why Plant Managers Choose Pelican Chemical</h2>
             <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            
             <div className="p-4">
               <div className="w-20 h-20 mx-auto bg-gray-800 rounded-2xl flex items-center justify-center mb-6 border border-gray-700 shadow-lg">
                 <ShieldCheck className="w-10 h-10 text-blue-400" />
@@ -149,13 +150,15 @@ export default function HomePage() {
               <h4 className="text-xl font-bold mb-4 text-gray-100">Consistent Chemical Purity</h4>
               <p className="text-gray-400">Every batch undergoes rigorous internal lab testing to ensure precise active ingredient percentages.</p>
             </div>
+
             <div className="p-4">
               <div className="w-20 h-20 mx-auto bg-gray-800 rounded-2xl flex items-center justify-center mb-6 border border-gray-700 shadow-lg">
                 <Zap className="w-10 h-10 text-blue-400" />
               </div>
               <h4 className="text-xl font-bold mb-4 text-gray-100">Membrane Life Extension</h4>
-              <p className="text-gray-400">Our advanced anti-precipitant formulas reduce clean-in-place (CIP) frequency and extend membrane life by up to 40%.</p>
+              <p className="text-gray-400">Our advanced anti-precipitant formulas are engineered to reduce clean-in-place (CIP) frequency and extend membrane life by up to 40%.</p>
             </div>
+
             <div className="p-4">
               <div className="w-20 h-20 mx-auto bg-gray-800 rounded-2xl flex items-center justify-center mb-6 border border-gray-700 shadow-lg">
                 <Building2 className="w-10 h-10 text-blue-400" />
@@ -163,6 +166,7 @@ export default function HomePage() {
               <h4 className="text-xl font-bold mb-4 text-gray-100">Direct-from-Manufacturer Pricing</h4>
               <p className="text-gray-400">Eliminate trading margins. Source directly from our manufacturing facility in Rajkot for highly competitive contract pricing.</p>
             </div>
+
           </div>
         </div>
       </section>
@@ -177,23 +181,28 @@ export default function HomePage() {
                 <p className="text-gray-600">Provide your requirements for contract pricing and bulk orders.</p>
               </div>
             </div>
+            
             <form className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-5 items-end">
+              {/* Mandatory Fields */}
               <div>
-                <label className="block text-sm font-bold text-gray-700 mb-2">Full Name <span className="text-red-500">*</span></label>
+                <label className="block text-sm font-bold text-gray-700 mb-2">Name <span className="text-red-500">*</span></label>
                 <input type="text" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all bg-white" placeholder="John Doe" required />
               </div>
               <div>
-                <label className="block text-sm font-bold text-gray-700 mb-2">Company Name <span className="text-red-500">*</span></label>
-                <input type="text" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all bg-white" placeholder="Acme Industries" required />
+                <label className="block text-sm font-bold text-gray-700 mb-2">Contact Number <span className="text-red-500">*</span></label>
+                <input type="tel" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all bg-white" placeholder="+91 XXXX XXXXX" required />
+              </div>
+              
+              {/* Non-Mandatory Fields */}
+              <div>
+                <label className="block text-sm font-bold text-gray-700 mb-2">Company Name</label>
+                <input type="text" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all bg-white" placeholder="Acme Industries" />
               </div>
               <div>
-                <label className="block text-sm font-bold text-gray-700 mb-2">Email Address <span className="text-red-500">*</span></label>
-                <input type="email" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all bg-white" placeholder="john@company.com" required />
+                <label className="block text-sm font-bold text-gray-700 mb-2">Email</label>
+                <input type="email" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all bg-white" placeholder="john@company.com" />
               </div>
-              <div>
-                <label className="block text-sm font-bold text-gray-700 mb-2">Phone Number</label>
-                <input type="tel" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all bg-white" placeholder="+91 XXXX XXXXX" />
-              </div>
+
               <div>
                 <label className="block text-sm font-bold text-gray-700 mb-2">Requirement Type</label>
                 <select className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all bg-white appearance-none">
@@ -203,10 +212,13 @@ export default function HomePage() {
                   <option>Technical Consultation</option>
                 </select>
               </div>
+
+              {/* Mandatory Monthly Volume */}
               <div className="lg:col-span-2">
-                <label className="block text-sm font-bold text-gray-700 mb-2">Requirement Details & Monthly Volume <span className="text-red-500">*</span></label>
-                <input type="text" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all bg-white" placeholder="Describe specific requirements, flow rates, or volumes..." required />
+                <label className="block text-sm font-bold text-gray-700 mb-2">Monthly Volume <span className="text-red-500">*</span></label>
+                <input type="text" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all bg-white" placeholder="E.g., 2000 Liters, 500 Kg, etc." required />
               </div>
+              
               <div>
                 <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-extrabold py-3 px-6 rounded-xl transition-all shadow-md hover:shadow-lg text-lg h-[50px] flex items-center justify-center">
                   Submit RFQ

@@ -92,38 +92,13 @@ export default function ApplicationPage() {
           </div>
         </section>
 
-        {/* 4. Company & Strengths */}
-        <section>
-          <div className="flex items-center gap-4 mb-8">
-            <div className="bg-blue-100 p-3 rounded-lg"><Building2 className="w-6 h-6 text-blue-600" /></div>
-            <h2 className="text-3xl font-bold text-gray-900">4. Company & Strengths</h2>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Link href="/about" className="block p-6 border rounded-xl hover:shadow-lg transition-all">
-              <h4 className="font-bold text-lg mb-1">Our Story</h4>
-              <p className="text-sm text-gray-500">Company profile & history since 2007.</p>
-            </Link>
-            <Link href="/strengths" className="block p-6 border rounded-xl hover:shadow-lg transition-all">
-              <h4 className="font-bold text-lg mb-1">Our Strengths</h4>
-              <p className="text-sm text-gray-500">Technical expertise & manufacturing.</p>
-            </Link>
-            <Link href="/quality" className="block p-6 border rounded-xl hover:shadow-lg transition-all">
-              <h4 className="font-bold text-lg mb-1">Quality Standards</h4>
-              <p className="text-sm text-gray-500">Industry-set norms & expert supervision.</p>
-            </Link>
-            <Link href="/gallery" className="block p-6 border rounded-xl hover:shadow-lg transition-all">
-              <h4 className="font-bold text-lg mb-1">Photo Gallery</h4>
-              <p className="text-sm text-gray-500">Manufacturing & product visuals.</p>
-            </Link>
-          </div>
-        </section>
-
-        {/* 5. Technical Resources & Contact */}
+       
+        {/* 4. Technical Resources & Contact */}
         <section className="grid md:grid-cols-2 gap-12 pt-12 border-t">
           <div>
             <div className="flex items-center gap-4 mb-6">
               <BookOpenText className="w-6 h-6 text-blue-600" />
-              <h2 className="text-2xl font-bold">5. Technical Resources & Support</h2>
+              <h2 className="text-2xl font-bold">4. Technical Resources & Support</h2>
             </div>
             <ul className="space-y-4">
               <li><Link href="/downloads/sds" className="text-blue-600 font-semibold hover:underline">Product Safety Data Sheets (SDS) →</Link></li>
