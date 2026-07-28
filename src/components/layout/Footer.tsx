@@ -74,11 +74,6 @@ export function Footer() {
                 </li>
                 <li>
                   <Link href="/quality" className="text-sm transition-colors hover:text-aqua">
-                    Safety Data Sheets (SDS)
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/quality" className="text-sm transition-colors hover:text-aqua">
                     ISO Certifications
                   </Link>
                 </li>

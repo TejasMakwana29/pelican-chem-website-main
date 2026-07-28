@@ -101,7 +101,7 @@ export default function ApplicationPage() {
               <h2 className="text-2xl font-bold">4. Technical Resources & Support</h2>
             </div>
             <ul className="space-y-4">
-              <li><Link href="/downloads/sds" className="text-blue-600 font-semibold hover:underline">Product Safety Data Sheets (SDS) →</Link></li>
+              
               <li><Link href="/water-analysis" className="text-blue-600 font-semibold hover:underline">Water Analysis Request →</Link></li>
             </ul>
           </div>
