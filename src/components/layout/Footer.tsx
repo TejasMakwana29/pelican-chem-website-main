@@ -15,8 +15,8 @@ export function Footer() {
           {/* Main Footer Links & Info - Using a 12-column grid for precise layout */}
           <div className="grid gap-8 md:gap-12 md:grid-cols-2 lg:grid-cols-12">
             
-            {/* Column 1: Logo & Map (Wider) */}
-            <div className="lg:col-span-3">
+            {/* Column 1: Logo & Map */}
+            <div className="lg:col-span-4">
               <div className="mb-6">
                 <Logo variant="full" theme="dark" />
               </div>
@@ -24,21 +24,15 @@ export function Footer() {
               {/* Google Maps Integration */}
               <div className="mb-6 h-40 w-full overflow-hidden rounded-xl border border-slate-700 bg-slate-800 shadow-inner">
                 <iframe
-  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14767.17725827309!2d70.798407!3d22.28578!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959ca118b91ac2f%3A0x4c2268f5822578c0!2sPelican%20Industries!5e0!3m2!1sen!2sin!4v1784974342133!5m2!1sen!2sin"
-  width="100%"
-  height="100%"
-  style={{ border: 0 }}
-  allowFullScreen={true}
-  loading="lazy"
-  referrerPolicy="no-referrer-when-downgrade"
-  title="Pelican Chemical Manufacturing Facility Location"
-/>
-              </div>
-
-              {/* GST and CST Information */}
-              <div className="space-y-2 text-sm text-slate-400">
-                <p>GST: {company.gst}</p>
-                <p>CST: {company.cst}</p>
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14767.17725827309!2d70.798407!3d22.28578!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959ca118b91ac2f%3A0x4c2268f5822578c0!2sPelican%20Industries!5e0!3m2!1sen!2sin!4v1784974342133!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Pelican Chemical Manufacturing Facility Location"
+                />
               </div>
             </div>
 
@@ -61,32 +55,8 @@ export function Footer() {
               </ul>
             </div>
 
-            {/* Column 3: Technical Access (Moved to sit beside Quick Links and Products) */}
-            <div className="lg:col-span-2">
-              <h3 className="mb-6 font-display text-sm font-semibold uppercase tracking-wider text-white">
-                Technical Access
-              </h3>
-              <ul className="space-y-3">
-                <li>
-                  <Link href="/quality" className="text-sm transition-colors hover:text-aqua">
-                    TDS Download
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/quality" className="text-sm transition-colors hover:text-aqua">
-                    ISO Certifications
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/about" className="text-sm transition-colors hover:text-aqua">
-                    Corporate Profile
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Column 4: Products */}
-            <div className="lg:col-span-2">
+            {/* Column 3: Products */}
+            <div className="lg:col-span-3">
               <h3 className="mb-6 font-display text-sm font-semibold uppercase tracking-wider text-white">
                 Products
               </h3>
@@ -104,7 +74,7 @@ export function Footer() {
               </ul>
             </div>
 
-            {/* Column 5: Contact (Wider) */}
+            {/* Column 4: Contact */}
             <div className="lg:col-span-3">
               <h3 className="mb-6 font-display text-sm font-semibold uppercase tracking-wider text-white">
                 Contact

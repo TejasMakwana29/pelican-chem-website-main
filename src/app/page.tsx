@@ -52,7 +52,7 @@ export default function HomePage() {
               <h3 className="text-xl font-bold text-gray-900 mb-4">Specialty & Heavy Industrial</h3>
               <div className="mb-8 flex-grow">
                 <p className="font-semibold text-sm text-gray-900 mb-2">Highlights:</p>
-                <p className="text-sm text-gray-600 leading-relaxed">High-purity EDTA (Diammonium / Tetrasodium) and customized industrial blending.</p>
+                <p className="text-sm text-gray-600 leading-relaxed">Copper, SS and all types of Metal Descaling chemical (AHU,FCU)</p>
               </div>
               <Link href="/products/specialty-chemicals" className="mt-auto inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors">
                 View Specialty Chemicals <span className="ml-2">→</span>

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Download, FileText } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { InquiryForm, DatasheetButton } from "@/components/ui/Forms";
+import { InquiryForm } from "@/components/ui/Forms";
 import { getProductBySlug, products } from "@/data/products";
 
 interface ProductPageProps {
@@ -57,7 +57,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 href={`/products/${category}`}
                 className="text-sm font-medium text-aqua-300 hover:text-white"
               >
-                ← {product.category}
+                ← Back to Category
               </Link>
               {product.code && (
                 <span className="ml-4 rounded-full bg-aqua/20 px-3 py-1 text-xs font-semibold text-aqua-300">
@@ -85,7 +85,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
               <FadeIn delay={0.1} className="mt-12">
                 <h3 className="heading-sub">Benefits</h3>
                 <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-                  {product.benefits.map((benefit) => (
+                  {product.benefits.map((benefit: string) => (
                     <li key={benefit} className="flex gap-3 text-sm text-slate-700">
                       <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-teal" />
                       {benefit}
@@ -97,7 +97,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
               <FadeIn delay={0.2} className="mt-12">
                 <h3 className="heading-sub">Applications</h3>
                 <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-                  {product.applications.map((app) => (
+                  {product.applications.map((app: string) => (
                     <li key={app} className="flex gap-3 text-sm text-slate-700">
                       <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-aqua" />
                       {app}
@@ -110,7 +110,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 <h3 className="heading-sub">Technical Highlights</h3>
                 <div className="mt-6 rounded-2xl bg-slate-50 p-8">
                   <ul className="space-y-3">
-                    {product.technicalHighlights.map((highlight) => (
+                    {product.technicalHighlights.map((highlight: string) => (
                       <li
                         key={highlight}
                         className="flex gap-3 border-b border-slate-200 pb-3 text-sm text-slate-700 last:border-0 last:pb-0"
@@ -123,7 +123,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 </div>
               </FadeIn>
 
-              {/* New Specifications Table Block */}
               {product.specifications && (
                 <FadeIn delay={0.35} className="mt-12">
                   <h3 className="heading-sub">Product Specifications</h3>
@@ -136,7 +135,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-slate-200">
-                        {product.specifications.map((spec) => (
+                        {product.specifications.map((spec: any) => (
                           <tr key={spec.property} className="hover:bg-slate-50/50">
                             <td className="px-6 py-4 font-medium">{spec.property}</td>
                             <td className="px-6 py-4">{spec.specification}</td>
@@ -148,17 +147,34 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 </FadeIn>
               )}
 
-              <FadeIn delay={0.4} className="mt-8">
-                <DatasheetButton productName={displayName} />
+              {/* Functional Datasheet Download Button */}
+              <FadeIn delay={0.4} className="mt-12">
+                <h3 className="heading-sub mb-4">Technical Documents</h3>
+                {product.datasheetUrl ? (
+                  <a
+                    href={product.datasheetUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 rounded-lg bg-navy px-6 py-3 font-semibold text-white transition-colors hover:bg-aqua focus:outline-none focus:ring-2 focus:ring-aqua focus:ring-offset-2"
+                  >
+                    <FileText className="h-5 w-5" />
+                    Download Technical Data Sheet (TDS)
+                    <Download className="ml-2 h-4 w-4" />
+                  </a>
+                ) : (
+                  <p className="text-sm text-slate-500 italic bg-slate-50 p-4 rounded-lg border border-slate-100">
+                    Datasheet currently unavailable online. Please use the inquiry form to request documents.
+                  </p>
+                )}
               </FadeIn>
             </div>
 
             <div>
               <FadeIn direction="right">
-                <div className="sticky top-28 rounded-2xl bg-slate-50 p-8">
+                <div className="sticky top-28 rounded-2xl bg-slate-50 p-8 border border-slate-100 shadow-sm">
                   <h3 className="heading-sub">Product Inquiry</h3>
                   <p className="mt-2 text-sm text-slate-600">
-                    Request pricing, technical data, or customized formulations.
+                    Request pricing, SDS documents, or customized formulations.
                   </p>
                   <div className="mt-6">
                     <InquiryForm productName={displayName} compact />
