@@ -6,6 +6,22 @@ import { Menu, X, ChevronDown, Phone, Mail } from "lucide-react";
 import { Logo } from "@/components/brand/Logo";
 import { navigation } from "@/data/navigation";
 import { company } from "@/data/company";
+import { getProductsByCategory } from "@/data/products"; // Added import
+
+// Helper function to bypass category pages with only 1 product
+const getSmartHref = (originalHref: string) => {
+  // Check if it's a category link (e.g., "/products/sea-water")
+  if (originalHref.startsWith("/products/") && originalHref.split("/").length === 3) {
+    const categorySlug = originalHref.split("/")[2];
+    const categoryProducts = getProductsByCategory(categorySlug);
+    
+    // If there's exactly 1 product, fast-track directly to it
+    if (categoryProducts && categoryProducts.length === 1) {
+      return `/products/${categorySlug}/${categoryProducts[0].slug}`;
+    }
+  }
+  return originalHref;
+};
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -56,8 +72,8 @@ export function Header() {
                       <div className="rounded-xl border border-slate-100 bg-white py-2 shadow-xl shadow-navy/10">
                         {item.children.map((child) => (
                           <Link
-                            key={child.href}
-                            href={child.href}
+                            key={child.label}
+                            href={getSmartHref(child.href)} // Applied Smart Routing
                             className="block px-4 py-2.5 text-sm text-slate-600 transition-colors hover:bg-aqua-50 hover:text-navy"
                           >
                             {child.label}
@@ -111,8 +127,8 @@ export function Header() {
                     <div className="ml-4 border-l border-slate-200 pl-4">
                       {item.children.map((child) => (
                         <Link
-                          key={child.href}
-                          href={child.href}
+                          key={child.label}
+                          href={getSmartHref(child.href)} // Applied Smart Routing
                           className="block py-2 text-sm text-slate-600"
                           onClick={() => setMobileOpen(false)}
                         >
