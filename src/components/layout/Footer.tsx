@@ -1,8 +1,21 @@
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
-import { Logo } from "@/components/brand/Logo";
 import { company } from "@/data/company";
 import { navigation } from "@/data/navigation";
+import { getProductsByCategory } from "@/data/products";
+
+// Helper function to bypass category pages with only 1 product (Consistency with Navbar)
+const getSmartHref = (originalHref: string) => {
+  if (originalHref.startsWith("/products/") && originalHref.split("/").length === 3) {
+    const categorySlug = originalHref.split("/")[2];
+    const categoryProducts = getProductsByCategory(categorySlug);
+    
+    if (categoryProducts && categoryProducts.length === 1) {
+      return `/products/${categorySlug}/${categoryProducts[0].slug}`;
+    }
+  }
+  return originalHref;
+};
 
 export function Footer() {
   const productLinks = navigation.find((n) => n.label === "Our Products")?.children ?? [];
@@ -15,14 +28,10 @@ export function Footer() {
           {/* Main Footer Links & Info - Using a 12-column grid for precise layout */}
           <div className="grid gap-8 md:gap-12 md:grid-cols-2 lg:grid-cols-12">
             
-            {/* Column 1: Logo & Map */}
-            <div className="lg:col-span-4">
-              <div className="mb-6">
-                <Logo variant="full" theme="dark" />
-              </div>
-              
+            {/* Column 1: Map (Logo removed, stretched to full height) */}
+            <div className="lg:col-span-4 h-full">
               {/* Google Maps Integration */}
-              <div className="mb-6 h-40 w-full overflow-hidden rounded-xl border border-slate-700 bg-slate-800 shadow-inner">
+              <div className="h-64 lg:h-full min-h-[240px] w-full overflow-hidden rounded-xl border border-slate-700 bg-slate-800 shadow-inner">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14767.17725827309!2d70.798407!3d22.28578!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959ca118b91ac2f%3A0x4c2268f5822578c0!2sPelican%20Industries!5e0!3m2!1sen!2sin!4v1784974342133!5m2!1sen!2sin"
                   width="100%"
@@ -32,6 +41,7 @@ export function Footer() {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Pelican Chemical Manufacturing Facility Location"
+                  className="h-full w-full"
                 />
               </div>
             </div>
@@ -64,7 +74,7 @@ export function Footer() {
                 {productLinks.map((item) => (
                   <li key={item.href}>
                     <Link
-                      href={item.href}
+                      href={getSmartHref(item.href)} // Applied Smart Routing
                       className="text-sm transition-colors hover:text-aqua"
                     >
                       {item.label}
