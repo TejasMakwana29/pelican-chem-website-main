@@ -22,6 +22,10 @@ export default function IndustriesPage() {
         name: "Food & Pharmaceutical Manufacturing",
         description: "Comprehensive treatment programs, high-pH RO antiscalants, and targeted cleaning solutions designed for food-grade reliability and uninterrupted purified water systems.",
         image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80",
+        // Added these empty arrays to satisfy TypeScript's strict Industry type requirements
+        challenges: [],
+        solutions: [],
+        products: []
       }
     ]);
 
