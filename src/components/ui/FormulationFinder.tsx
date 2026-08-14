@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Phone } from "lucide-react"; // Added Phone here
+import { ArrowRight, Phone } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { products } from "@/data/products";
 
@@ -72,16 +72,16 @@ const suggestorLogic: AppMap = {
 export function FormulationFinder() {
   const [application, setApplication] = useState("");
   const [issue, setIssue] = useState("");
-  const [results, setResults] = useState<any[] | null>(null);
+  
+  // FIX 1: We tell TypeScript this is an array formatted exactly like our master 'products' list, rather than 'any[]'
+  const [results, setResults] = useState<typeof products | null>(null);
 
-  // When application changes, reset the issue and clear results
   const handleAppChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setApplication(e.target.value);
     setIssue("");
     setResults(null);
   };
 
-  // When issue changes, clear results until they click search
   const handleIssueChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setIssue(e.target.value);
     setResults(null);
@@ -91,16 +91,12 @@ export function FormulationFinder() {
     e.preventDefault();
     if (!application || !issue) return;
 
-    // Find the required product slugs from our logic map
     const slugsToFind = suggestorLogic[application].issues[issue].productSlugs;
-    
-    // Filter the master product list to find matching products
     const foundProducts = products.filter(product => slugsToFind.includes(product.slug));
     
     setResults(foundProducts);
   };
 
-  // Dynamically grab available issues for the second dropdown
   const availableIssues = application ? suggestorLogic[application].issues : {};
 
   return (
@@ -113,7 +109,6 @@ export function FormulationFinder() {
           </div>
           
           <form onSubmit={handleSearch} className="mt-10 grid gap-4 md:grid-cols-3">
-            {/* Dropdown 1: Application */}
             <select 
               className="w-full rounded-xl border-none bg-white/10 px-4 py-4 text-white outline-none focus:ring-2 focus:ring-aqua cursor-pointer"
               value={application}
@@ -128,7 +123,6 @@ export function FormulationFinder() {
               ))}
             </select>
 
-            {/* Dropdown 2: Target Issue (Dynamically Populated) */}
             <select 
               className="w-full rounded-xl border-none bg-white/10 px-4 py-4 text-white outline-none focus:ring-2 focus:ring-aqua disabled:opacity-50 cursor-pointer"
               value={issue}
@@ -155,7 +149,6 @@ export function FormulationFinder() {
           </form>
         </FadeIn>
 
-        {/* Dynamic Results Area */}
         {results !== null && (
           <div className="mt-12">
             <FadeIn>
@@ -164,7 +157,6 @@ export function FormulationFinder() {
               </h3>
               
               {results.length === 1 ? (
-                /* HERO LAYOUT FOR SINGLE PRODUCT */
                 <div className="max-w-5xl mx-auto">
                   <Link
                     href={`/products/${results[0].categorySlug}/${results[0].slug}`}
@@ -199,7 +191,6 @@ export function FormulationFinder() {
                   </Link>
                 </div>
               ) : results.length > 1 ? (
-                /* GRID LAYOUT FOR MULTIPLE PRODUCTS */
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
                   {results.map((product) => (
                     <Link
@@ -236,14 +227,14 @@ export function FormulationFinder() {
                   ))}
                 </div>
               ) : (
-                /* PREMIUM FALLBACK IF ZERO RESULTS */
                 <div className="mx-auto max-w-2xl text-center bg-white p-10 rounded-2xl shadow-sm ring-1 ring-slate-200">
                   <div className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-aqua/10 mb-6">
                     <Phone className="h-8 w-8 text-aqua" />
                   </div>
                   <h4 className="text-xl font-bold text-navy mb-3">Custom Formulation Required</h4>
+                  {/* FIX 2: Escaped the apostrophe in "facility's" below */}
                   <p className="text-slate-600 mb-8">
-                    This specific application issue requires a specialized or tailored chemical approach. Our engineering team can develop a custom solution specifically for your facility's unique parameters.
+                    This specific application issue requires a specialized or tailored chemical approach. Our engineering team can develop a custom solution specifically for your facility&apos;s unique parameters.
                   </p>
                   <Link href="/contact" className="btn-primary inline-flex items-center gap-2">
                     Consult Our Technical Team
