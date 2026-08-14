@@ -79,7 +79,27 @@ export default async function ProductPage({ params }: ProductPageProps) {
             <div className="lg:col-span-2">
               <FadeIn>
                 <h2 className="heading-section">Product Overview</h2>
-                <p className="mt-6 text-body">{product.overview}</p>
+                <p className="mt-6 text-body whitespace-pre-wrap">{product.overview}</p>
+                
+                {/* Functional Datasheet Download Button Moved Right After Description */}
+                <div className="mt-8">
+                  {product.datasheetUrl ? (
+                    <a
+                      href={product.datasheetUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-3 rounded-lg bg-navy px-6 py-3 font-semibold text-white transition-colors hover:bg-aqua focus:outline-none focus:ring-2 focus:ring-aqua focus:ring-offset-2"
+                    >
+                      <FileText className="h-5 w-5" />
+                      Download Technical Data Sheet (TDS)
+                      <Download className="ml-2 h-4 w-4" />
+                    </a>
+                  ) : (
+                    <p className="text-sm text-slate-500 italic bg-slate-50 p-4 rounded-lg border border-slate-100">
+                      Datasheet currently unavailable online. Please use the inquiry form to request documents.
+                    </p>
+                  )}
+                </div>
               </FadeIn>
 
               <FadeIn delay={0.1} className="mt-12">
@@ -135,7 +155,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-slate-200">
-                        {product.specifications.map((spec: any) => (
+                        {/* TYPE ERROR FIXED HERE */}
+                        {product.specifications.map((spec: { property: string; specification: string }) => (
                           <tr key={spec.property} className="hover:bg-slate-50/50">
                             <td className="px-6 py-4 font-medium">{spec.property}</td>
                             <td className="px-6 py-4">{spec.specification}</td>
@@ -146,27 +167,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
                   </div>
                 </FadeIn>
               )}
-
-              {/* Functional Datasheet Download Button */}
-              <FadeIn delay={0.4} className="mt-12">
-                <h3 className="heading-sub mb-4">Technical Documents</h3>
-                {product.datasheetUrl ? (
-                  <a
-                    href={product.datasheetUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 rounded-lg bg-navy px-6 py-3 font-semibold text-white transition-colors hover:bg-aqua focus:outline-none focus:ring-2 focus:ring-aqua focus:ring-offset-2"
-                  >
-                    <FileText className="h-5 w-5" />
-                    Download Technical Data Sheet (TDS)
-                    <Download className="ml-2 h-4 w-4" />
-                  </a>
-                ) : (
-                  <p className="text-sm text-slate-500 italic bg-slate-50 p-4 rounded-lg border border-slate-100">
-                    Datasheet currently unavailable online. Please use the inquiry form to request documents.
-                  </p>
-                )}
-              </FadeIn>
             </div>
 
             <div>
