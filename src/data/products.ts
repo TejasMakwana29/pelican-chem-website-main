@@ -118,7 +118,7 @@ export const products: Product[] = [
       { property: "Specific Gravity", specification: "1.35–1.45" }
     ],
     image: "https://images.unsplash.com/photo-1581093458791-9f3023e2d2b8?w=800&q=80",
-    datasheetUrl: "/downloads/PELICAN-301-TDS.pdf"
+    datasheetUrl: "/Datasheets/PELICAN-301.pdf"
   },
   {
     slug: "pelican-antiscalant-309",

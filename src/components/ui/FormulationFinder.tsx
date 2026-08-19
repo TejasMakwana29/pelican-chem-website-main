@@ -10,28 +10,36 @@ import { products } from "@/data/products";
 // ==========================================
 // 1. THE LOGIC MAP (THE "BRAIN")
 // ==========================================
-type IssueMap = {
-  [issueId: string]: {
-    label: string;
-    productSlugs: string[]; 
-  };
-};
-
-type AppMap = {
-  [appId: string]: {
-    label: string;
-    issues: IssueMap;
-  };
-};
-
 const suggestorLogic: AppMap = {
   "ro": {
     label: "Water Treatment Plant / RO System",
     issues: {
-      "scale": { label: "Scale Prevention", productSlugs: ["ro-antiscalant-high-ph", "ro-antiscalant-low-ph", "ro-antiscalant-silica", "sea-water-ro-antiscalant-399"] },
-      "ph": { label: "pH Correction", productSlugs: ["ro-ph-booster", "ro-ph-booster-food-grade"] },
-      "descaling": { label: "Cleaning & Descaling", productSlugs: ["ro-descaling-high-ph", "ro-descaling-low-ph", "ro-descaling-silica", "ro-descaling-bio-foul"] },
-      "odor": { label: "Bad Odor", productSlugs: ["ro-biocide"] } 
+      "scale": { 
+        label: "Scale Prevention", 
+        // Ensure these exact slugs match your products.ts file for 301, 309, etc.
+        productSlugs: ["ro-antiscalant-high-ph", "ro-antiscalant-low-ph", "ro-antiscalant-silica"] 
+      },
+      "ph": { 
+        label: "pH Correction", 
+        productSlugs: ["ro-ph-booster", "ro-ph-booster-food-grade"] 
+      },
+      "descaling": { 
+        label: "Cleaning & Descaling", 
+        productSlugs: ["ro-descaling-high-ph", "ro-descaling-low-ph", "ro-descaling-silica", "ro-descaling-bio-foul"] 
+      },
+      "odor": { 
+        label: "Bad Odor", 
+        productSlugs: ["ro-biocide"] 
+      } 
+    }
+  },
+  "seawater": {
+    label: "Sea Water Desalination",
+    issues: {
+      "scale": { 
+        label: "Scale Prevention", 
+        productSlugs: ["sea-water-ro-antiscalant-399"] 
+      }
     }
   },
   "etp": {
@@ -44,11 +52,21 @@ const suggestorLogic: AppMap = {
     }
   },
   "boiler": {
-    label: "Boiler & Cooling Towers",
+    label: "Boiler Systems",
     issues: {
-      "scale": { label: "Scale Prevention", productSlugs: ["boiler-chemical-pelican-br-01-11", "cooling-tower-antiscalant"] },
+      "scale-corrosion": { 
+        label: "Scale & Corrosion Prevention", 
+        // Double check this slug matches exactly what you named the Boiler chemical in products.ts
+        productSlugs: ["boiler-chemical-pelican-br-01-11"] 
+      }
+    }
+  },
+  "cooling-tower": {
+    label: "Cooling Towers",
+    issues: {
+      "scale": { label: "Scale Prevention", productSlugs: ["cooling-tower-antiscalant"] },
       "descaling": { label: "Cleaning & Descaling", productSlugs: ["cooling-tower-descaling"] },
-      "odor": { label: "Bad Odor", productSlugs: ["cooling-tower-micro-biocide"] }
+      "algae": { label: "Algae & Biological Growth", productSlugs: ["cooling-tower-micro-biocide"] }
     }
   },
   "chiller": {
@@ -58,7 +76,7 @@ const suggestorLogic: AppMap = {
     }
   },
   "other": {
-    label: "Other",
+    label: "Other Industrial Applications",
     issues: {
       "descaling": { label: "Cleaning & Descaling", productSlugs: ["descaling-industrial-equipment", "descaling-solar-pipes"] },
       "scale": { label: "Scale Prevention", productSlugs: ["edta-chemical"] }
