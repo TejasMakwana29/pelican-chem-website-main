@@ -30,7 +30,7 @@ export function Logo({
       ? "/images/pelican-mark.svg"
       : theme === "dark"
         ? "/images/pelican-logo-light.svg"
-        : "/images/pelican-logo.svg";
+        : "/images/pelican-logo.png";
 
   const image = (
     <Image

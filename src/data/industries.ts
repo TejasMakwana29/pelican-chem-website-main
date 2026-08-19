@@ -28,7 +28,7 @@ export const industries: Industry[] = [
     ],
     products: ["PELICAN-301", "PELICAN-309", "PELICAN-101"],
     image:
-      "https://images.unsplash.com/photo-1581093458791-9f3023e2d2b8?w=800&q=80",
+      "/images/waterplant.jpg",
   },
   {
     slug: "ro-plants",
@@ -49,7 +49,7 @@ export const industries: Industry[] = [
     ],
     products: ["PELICAN-301", "PELICAN-319", "PELICAN-309 H/S"],
     image:
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
+      "/images/RO-dosing.jpg",
   },
   {
     slug: "industrial-utilities",
@@ -70,7 +70,7 @@ export const industries: Industry[] = [
     ],
     products: ["Boiler Treatment Range", "Cooling Tower Program"],
     image:
-      "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80",
+      "/images/coolingtower.jpg",
   },
   {
     slug: "manufacturing",
@@ -91,7 +91,7 @@ export const industries: Industry[] = [
     ],
     products: ["PELICAN-101", "PELICAN-309", "EDTA Agents"],
     image:
-      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
+      "/images/manufacturingplant.jpg",
   },
   {
     slug: "power-plants",
@@ -112,7 +112,7 @@ export const industries: Industry[] = [
     ],
     products: ["Boiler Treatment Range", "Cooling Tower Program", "PELICAN-301"],
     image:
-      "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80",
+      "/images/powerplant.jpg",
   },
   {
     slug: "textile-industry",
@@ -133,7 +133,7 @@ export const industries: Industry[] = [
     ],
     products: ["PELICAN-101", "EDTA Agents"],
     image:
-      "https://images.unsplash.com/photo-1558171813-4c088753af8f?w=800&q=80",
+      "/images/textileplant.jpg",
   },
   {
     slug: "chemical-processing",
@@ -154,7 +154,7 @@ export const industries: Industry[] = [
     ],
     products: ["EDTA Agents", "PELICAN-101"],
     image:
-      "https://images.unsplash.com/photo-1532187863486-abf9db3881b5?w=800&q=80",
+      "/images/chemicalplant.jpg",
   },
   {
     slug: "commercial-water-systems",
@@ -175,7 +175,7 @@ export const industries: Industry[] = [
     ],
     products: ["PELICAN-309", "Cooling Tower Program"],
     image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
+      "/images/coomercialbuilding.jpg",
   },
 ];
 

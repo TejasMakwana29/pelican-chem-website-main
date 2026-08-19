@@ -12,7 +12,7 @@ export default function HomePage() {
       <HeroSection />
 
       {/* 2. Formulation Finder */}
-      <FormulationFinder />
+      {/* <FormulationFinder /> */}
 
       {/* 4. Our Core Chemical Categories */}
       <section className="py-24 bg-gray-50">
