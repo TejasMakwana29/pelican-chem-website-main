@@ -51,7 +51,7 @@ export default function AboutPage() {
             <FadeIn direction="right">
               <div className="relative aspect-square overflow-hidden rounded-3xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80"
+                  src="/images/aboutus.jpeg"
                   alt="Pelican Chem facility"
                   fill
                   className="object-cover"

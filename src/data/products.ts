@@ -26,7 +26,7 @@ export const productCategories: ProductCategory[] = [
     slug: "ro-dosing-chemicals",
     name: "RO Dosing Chemicals",
     description: "High-performance antiscalants for optimal membrane protection and system efficiency.",
-    image: "https://images.unsplash.com/photo-1581093458791-9f3023e2d2b8?w=800&q=80",
+    image: "/images/RO-dosing.jpg",
   },
   {
     slug: "sea-water",
