@@ -166,7 +166,7 @@ export const products: Product[] = [
       { property: "Specific Gravity", specification: "1.17–1.23" }
     ],
     image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
-    datasheetUrl: "/downloads/PELICAN-319-TDS.pdf"
+    datasheetUrl: "/Datasheets/PELICAN-309.pdf"
   },
 
   {
@@ -300,7 +300,7 @@ export const products: Product[] = [
       { property: "Viscosity", specification: "Approximately 30–130 cPs" }
     ],
     image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
-    datasheetUrl: "/downloads/PELICAN-101-TDS.pdf"
+    datasheetUrl: "/Datasheets/ETP-PELICAN-101.pdf"
   },
 
   // --- EDTA ---
@@ -380,7 +380,7 @@ export const products: Product[] = [
       "Reliable Industrial Performance"
     ],
     image: "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80",
-    datasheetUrl: "/downloads/PELICAN-BR-01-11-TDS.pdf"
+    datasheetUrl: "/Datasheets/PELICAN-BLR.pdf"
   },
 
   // --- RO DESCALING CHEMICALS ---
@@ -417,7 +417,7 @@ export const products: Product[] = [
       "Important Note: Do not use on cellulose acetate membranes"
     ],
     image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
-    datasheetUrl: "/downloads/PELICAN-DS-H17-TDS.pdf"
+    datasheetUrl: "/Datasheets/PELICAN-RO Cleaner.pdf"
   },
   {
     slug: "pelican-ds-l17",
@@ -450,7 +450,7 @@ export const products: Product[] = [
       "Important Note: Do not use on cellulose acetate membranes"
     ],
     image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
-    datasheetUrl: "/downloads/PELICAN-DS-L17-TDS.pdf"
+    datasheetUrl: "/Datasheets/PELICAN-RO Cleaner.pdf"
   },
 
   // --- COOLING TOWER ---
@@ -639,7 +639,7 @@ export const products: Product[] = [
       "Reliable Performance Across Multiple Applications"
     ],
     image: "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80",
-    datasheetUrl: "/downloads/AHU-FCU-Descaling-TDS.pdf"
+    datasheetUrl: "/Datasheets/PELICAN-AHU.pdf"
   },
   {
     slug: "descaling-chiller",
@@ -679,7 +679,7 @@ export const products: Product[] = [
       "Reliable Performance Across Multiple Applications"
     ],
     image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80",
-    datasheetUrl: "/downloads/Chiller-Descaling-TDS.pdf"
+    datasheetUrl: "/Datasheets/PELICAN-CHL 107.pdf"
   },
   {
     slug: "descaling-solar-pipes",
