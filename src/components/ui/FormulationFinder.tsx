@@ -10,13 +10,26 @@ import { products } from "@/data/products";
 // ==========================================
 // 1. THE LOGIC MAP (THE "BRAIN")
 // ==========================================
+type IssueMap = {
+  [issueId: string]: {
+    label: string;
+    productSlugs: string[]; 
+  };
+};
+
+type AppMap = {
+  [appId: string]: {
+    label: string;
+    issues: IssueMap;
+  };
+};
+
 const suggestorLogic: AppMap = {
   "ro": {
     label: "Water Treatment Plant / RO System",
     issues: {
       "scale": { 
         label: "Scale Prevention", 
-        // Ensure these exact slugs match your products.ts file for 301, 309, etc.
         productSlugs: ["ro-antiscalant-high-ph", "ro-antiscalant-low-ph", "ro-antiscalant-silica"] 
       },
       "ph": { 
@@ -56,7 +69,6 @@ const suggestorLogic: AppMap = {
     issues: {
       "scale-corrosion": { 
         label: "Scale & Corrosion Prevention", 
-        // Double check this slug matches exactly what you named the Boiler chemical in products.ts
         productSlugs: ["boiler-chemical-pelican-br-01-11"] 
       }
     }
