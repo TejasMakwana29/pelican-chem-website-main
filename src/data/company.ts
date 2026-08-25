@@ -5,7 +5,7 @@ export const company = {
   established: 2007,
   location: "Rajkot, Gujarat, India",
   email: "info@pelicanchem.com",
-  phones: ["+91 98242 58544", "+91 99795 77708"],
+  phones: ["+91 98242 58544", "+91 8793161066", "+91 99795 77708"],
   gst: "24090800904",
   cst: "24590800904",
   address: {

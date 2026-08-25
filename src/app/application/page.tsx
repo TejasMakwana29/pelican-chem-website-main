@@ -53,17 +53,17 @@ export default function ApplicationPage() {
         <section>
           <div className="flex items-center gap-4 mb-8">
             <div className="bg-blue-100 p-3 rounded-lg"><Factory className="w-6 h-6 text-blue-600" /></div>
-            <h2 className="text-3xl font-bold text-gray-900">2. Water & Sewage Treatment Plants</h2>
+            <h2 className="text-3xl font-bold text-gray-900">2. Water Treatment Plants</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
               <h3 className="text-xl font-bold mb-2">Water Treatment Plants (WTP)</h3>
               <p className="text-gray-600">Comprehensive hardware solutions for high-quality water production.</p>
             </div>
-            <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
+            {/*<div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
               <h3 className="text-xl font-bold mb-2">Sewage Treatment Plants (STP)</h3>
               <p className="text-gray-600">Efficient systems designed for municipal and commercial sewage management.</p>
-            </div>
+            </div>*/}
             <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
               <h3 className="text-xl font-bold mb-2">Effluent Treatment Plants (ETP)</h3>
               <p className="text-gray-600">Customized plants to handle industrial wastewater discharge compliance.</p>

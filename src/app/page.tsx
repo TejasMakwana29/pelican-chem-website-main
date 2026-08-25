@@ -1,8 +1,7 @@
 import { FormulationFinder } from "@/components/ui/FormulationFinder";
-import {
-  HeroSection,
-} from "@/components/sections/HomeSections";
+import { HeroSection } from "@/components/sections/HomeSections";
 import Link from "next/link";
+import Image from "next/image"; // ADDED THIS IMPORT
 import { ShieldCheck, Zap, Building2 } from "lucide-react";
 
 export default function HomePage() {
@@ -27,7 +26,7 @@ export default function HomePage() {
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 hover:shadow-lg transition-all duration-300 flex flex-col h-full">
               <h3 className="text-xl font-bold text-gray-900 mb-4">RO Membrane Performance</h3>
               <div className="mb-8 flex-grow">
-                <p className="font-semibold text-sm text-gray-900 mb-2">Highlights:</p>
+                <p className="font-semibold text-sm text-gray-900 mb-2"></p>
                 <p className="text-sm text-gray-600 leading-relaxed">Antiscalants (PELICAN-301, PELICAN-309), Membrane Cleaners, and Biocides.</p>
               </div>
               <Link href="/products/ro-chemicals" className="mt-auto inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors">
@@ -39,7 +38,7 @@ export default function HomePage() {
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 hover:shadow-lg transition-all duration-300 flex flex-col h-full">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Boiler, Chiller & Cooling Tower</h3>
               <div className="mb-8 flex-grow">
-                <p className="font-semibold text-sm text-gray-900 mb-2">Highlights:</p>
+                <p className="font-semibold text-sm text-gray-900 mb-2"></p>
                 <p className="text-sm text-gray-600 leading-relaxed">Chiller Scaling Problem Solvers, Scale & Corrosion Inhibitors, Oxygen Scavengers, and Biocides.</p>
               </div>
               <Link href="/products/thermal-solutions" className="mt-auto inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors">
@@ -51,7 +50,7 @@ export default function HomePage() {
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 hover:shadow-lg transition-all duration-300 flex flex-col h-full">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Specialty & Heavy Industrial</h3>
               <div className="mb-8 flex-grow">
-                <p className="font-semibold text-sm text-gray-900 mb-2">Highlights:</p>
+                <p className="font-semibold text-sm text-gray-900 mb-2"></p>
                 <p className="text-sm text-gray-600 leading-relaxed">Copper, SS and all types of Metal Descaling chemical (AHU,FCU)</p>
               </div>
               <Link href="/products/specialty-chemicals" className="mt-auto inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors">
@@ -63,7 +62,7 @@ export default function HomePage() {
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 hover:shadow-lg transition-all duration-300 flex flex-col h-full">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Wastewater & ETP Formulations</h3>
               <div className="mb-8 flex-grow">
-                <p className="font-semibold text-sm text-gray-900 mb-2">Highlights:</p>
+                <p className="font-semibold text-sm text-gray-900 mb-2"></p>
                 <p className="text-sm text-gray-600 leading-relaxed">Coagulants, Flocculants, Decolorizing agents, and pH adjusters for industrial effluents.</p>
               </div>
               <Link href="/products/etp-chemicals" className="mt-auto inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors">
@@ -83,23 +82,38 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div className="bg-gray-50 p-10 rounded-3xl border border-gray-200">
+            <div className="bg-gray-50 p-10 rounded-3xl border border-gray-200 flex flex-col justify-center">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Private Label & White Label Manufacturing (OEM)</h3>
               <p className="text-gray-600 text-lg mb-8 leading-relaxed">
                 Launch your own brand of water treatment chemicals. We offer premium white-label manufacturing with your custom branding, strict quality assurance, and bulk packaging options from 25Kg cans to 200L drums.
               </p>
-              <Link href="/contact" className="inline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors">
-                Inquire About Private Labeling
-              </Link>
+              <div>
+                <Link href="/contact" className="inline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors">
+                  Inquire About Private Labeling
+                </Link>
+              </div>
             </div>
-            <div className="bg-gray-50 p-10 rounded-3xl border border-gray-200">
+            
+            {/* Turnkey section kept in comments as requested */}
+            {/*<div className="bg-gray-50 p-10 rounded-3xl border border-gray-200">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Turnkey Water & Sewage Treatment Plants (EPC)</h3>
               <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-                Beyond chemicals, we design, manufacture, and commission complete RO Plants, Effluent Treatment Plants (ETP), and Sewage Treatment Plants (STP) tailored to your factory&apos;s specific flow rates and input water quality.
+                Beyond chemicals, we design, manufacture, and commission complete RO Plants, Effluent Treatment Plants (ETP), and Sewage Treatment Plants (STP) tailored to your factory's specific flow rates and input water quality.
               </p>
               <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-colors">
                 Get Plant Specifications
               </Link>
+            </div>*/}
+
+            {/* ADDED: Stock Image placeholder mirroring the card styling */}
+            <div className="relative h-full min-h-[350px] w-full rounded-3xl overflow-hidden border border-gray-200 shadow-sm group">
+              <Image 
+                src="/images/aboutus.jpeg" // Update this path to whatever stock image you want to use
+                alt="Pelican Chemical Manufacturing Facility"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
           </div>
         </div>

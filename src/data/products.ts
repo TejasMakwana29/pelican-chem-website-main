@@ -22,53 +22,84 @@ export interface ProductCategory {
 }
 
 export const productCategories: ProductCategory[] = [
+  // 1. RO Antiscalant
   {
     slug: "ro-dosing-chemicals",
-    name: "RO Dosing Chemicals",
+    name: "RO Antiscalant Chemicals",
     description: "High-performance antiscalants for optimal membrane protection and system efficiency.",
     image: "/images/RO-dosing.jpg",
   },
+  
+  // 2. Sea Water
   {
     slug: "sea-water",
     name: "Sea Water",
     description: "Specialized antiscalants engineered for the extreme challenges of seawater reverse osmosis.",
     image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80",
   },
-  {
-    slug: "etp",
-    name: "ETP",
-    description: "Effluent treatment plant chemicals for effective wastewater processing and compliance.",
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
-  },
-  {
-    slug: "edta",
-    name: "EDTA",
-    description: "High-purity EDTA chelating agents for industrial cleaning and process applications.",
-    image: "https://images.unsplash.com/photo-1532187863486-abf9db3881b5?w=800&q=80",
-  },
-  {
-    slug: "boiler-chemical",
-    name: "Boiler Chemical",
-    description: "Comprehensive boiler water treatment chemicals for scale prevention and efficiency.",
-    image: "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80",
-  },
-  {
-    slug: "ro-descaling-chemicals",
-    name: "RO Descaling Chemicals",
-    description: "Professional cleaning and descaling solutions for membrane performance recovery.",
-    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
-  },
+  
+  // 3. Cooling Tower Chemical
   {
     slug: "cooling-tower",
     name: "Cooling Tower",
     description: "Cooling tower treatments for biofouling control, scale prevention, and corrosion inhibition.",
     image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80",
   },
+  
+  // 4. Boiler Chemical
+  {
+    slug: "boiler-chemical",
+    name: "Boiler Chemical",
+    description: "Comprehensive boiler water treatment chemicals for scale prevention and efficiency.",
+    image: "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80",
+  },
+  
+  // 5. RO Descaling Chemical
+  {
+    slug: "ro-descaling-chemicals",
+    name: "RO Descaling Chemicals",
+    description: "Professional cleaning and descaling solutions for membrane performance recovery.",
+    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
+  },
+  
+ // 6. Chiller Chemical (Newly Added)
+ {
+    slug: "chiller-chemical",
+    name: "Chiller Chemical",
+    description: "Versatile descaling chemicals for chillers and industrial equipment.",
+    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
+  },
+  
+  // 7. Descaling Chemical
   {
     slug: "descaling-chemical",
     name: "Descaling Chemical",
     description: "Versatile descaling chemicals for AHU/FCU, chillers, solar pipes, and industrial equipment.",
     image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
+  },
+  
+  // 8. AHU / FCU (Newly Added)
+  {
+    slug: "ahu-fcu-chemical",
+    name: "AHU / FCU",
+    description: "Specialized cleaning chemicals for Air Handling and Fan Coil Units.",
+    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
+  },
+  
+  // 9. ETP
+  {
+    slug: "etp",
+    name: "ETP",
+    description: "Effluent treatment plant chemicals for effective wastewater processing and compliance.",
+    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
+  },
+  
+  // 10. EDTA
+  {
+    slug: "edta",
+    name: "EDTA",
+    description: "High-purity EDTA chelating agents for industrial cleaning and process applications.",
+    image: "https://images.unsplash.com/photo-1532187863486-abf9db3881b5?w=800&q=80",
   },
 ];
 
@@ -122,12 +153,12 @@ export const products: Product[] = [
   },
   {
     slug: "pelican-antiscalant-309",
-    name: "Low pH RO Antiscalant (PELICAN-309/319)",
-    code: "PELICAN-319",
+    name: "Low pH RO Antiscalant (PELICAN-309)",
+    code: "PELICAN-309",
     category: "RO Dosing Chemicals",
     categorySlug: "ro-dosing-chemicals",
     shortDescription: "Reliable Scale Control for RO, NF & UF Membrane Systems",
-    overview: "PELICAN-319 is a high-performance low pH RO antiscalant designed to protect reverse osmosis (RO), nanofiltration (NF), and ultrafiltration (UF) membrane systems from scale formation and fouling. Its advanced formulation helps prevent the buildup of inorganic salts and suspended particles, ensuring consistent plant performance and longer membrane life.\n\nWhy Choose PELICAN-319?\nMembrane scaling is one of the leading causes of reduced efficiency and increased maintenance in water treatment plants. PELICAN-319 minimizes these challenges by preventing scale deposits before they form, allowing your system to operate more efficiently while reducing operating costs.",
+    overview: "PELICAN-309 is a high-performance low pH RO antiscalant designed to protect reverse osmosis (RO), nanofiltration (NF), and ultrafiltration (UF) membrane systems from scale formation and fouling. Its advanced formulation helps prevent the buildup of inorganic salts and suspended particles, ensuring consistent plant performance and longer membrane life.\n\nWhy Choose PELICAN-309?\nMembrane scaling is one of the leading causes of reduced efficiency and increased maintenance in water treatment plants. PELICAN-309 minimizes these challenges by preventing scale deposits before they form, allowing your system to operate more efficiently while reducing operating costs.",
     benefits: [
       "Prevents inorganic scale formation on RO membranes",
       "Controls calcium phosphate and other hard water deposits",
@@ -346,12 +377,12 @@ export const products: Product[] = [
   // --- BOILER CHEMICAL ---
   {
     slug: "pelican-br",
-    name: "Boiler Chemical (PELICAN-BR 01/11)",
+    name: "Boiler Chemical (PELICAN-BLR)",
     code: "PELICAN-BR 01/11",
     category: "Boiler Chemical",
     categorySlug: "boiler-chemical",
     shortDescription: "Advanced Boiler Water Treatment for Cleaner, More Efficient Operations",
-    overview: "PELICAN-BR 01/11 is a high-performance boiler treatment chemical designed to prevent scale formation, corrosion, and metal oxide deposits inside industrial boilers. By keeping boiler internals clean, it improves heat transfer efficiency, reduces fuel consumption, and extends the service life of your boiler system.\n\nWhy Choose PELICAN-BR 01/11?\nEven a thin layer of scale inside a boiler can reduce efficiency and increase energy costs. PELICAN-BR 01/11 helps maintain clean heat transfer surfaces, ensuring smooth operation, reduced maintenance, and improved boiler reliability.",
+    overview: "PELICAN-BLR is a high-performance boiler treatment chemical designed to prevent scale formation, corrosion, and metal oxide deposits inside industrial boilers. By keeping boiler internals clean, it improves heat transfer efficiency, reduces fuel consumption, and extends the service life of your boiler system.\n\nWhy Choose PELICAN-BLR?\nEven a thin layer of scale inside a boiler can reduce efficiency and increase energy costs. PELICAN-BLR helps maintain clean heat transfer surfaces, ensuring smooth operation, reduced maintenance, and improved boiler reliability.",
     benefits: [
       "Prevents scale formation on boiler surfaces",
       "Controls metal ion and metal oxide deposits",
@@ -451,6 +482,90 @@ export const products: Product[] = [
     ],
     image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
     datasheetUrl: "/Datasheets/PELICAN-RO Cleaner.pdf"
+  },
+
+  // --- CHILLER CHEMICALS ---
+  {
+    slug: "Chiller-Chemical",
+    name: "Chiller Chemical",
+    category: "RO Descaling Chemicals",
+    categorySlug: "chiller-chemical",
+    shortDescription: "Formulated for chiller tube and condenser cleaning.",
+    overview: "Pelican Chemical's descaling solutions dissolve mineral deposits quickly and safely, helping your systems operate at peak efficiency. Specially developed for chillers and cooling systems, this chemical removes scale and deposits from heat exchangers, helping restore cooling efficiency while reducing energy consumption and equipment wear.",
+    benefits: [
+      "Removes hard scale, rust, and mineral deposits",
+      "Restores heat transfer efficiency",
+      "Improves equipment performance",
+      "Reduces energy consumption",
+      "Minimizes maintenance downtime",
+      "Safe for a wide range of metal surfaces when used as recommended",
+      "Easy-to-use formulations for industrial cleaning",
+      "Extends equipment service life"
+    ],
+    applications: [
+      "Chillers",
+      "Heat Exchangers",
+      "Cooling Towers",
+      "Boilers",
+      "AHU & FCU Coils",
+      "HVAC Systems",
+      "Solar Water Heating Systems",
+      "Pipelines",
+      "Process Equipment",
+      "Industrial Manufacturing Plants"
+    ],
+    technicalHighlights: [
+      "Fast Scale Removal",
+      "Suitable for MS, SS & Copper",
+      "Restores Heat Transfer Efficiency & Improves Equipment Performance",
+      "Reduces Maintenance Downtime",
+      "Easy-to-Apply Formulation & Cost-Effective Industrial Cleaning",
+      "Reliable Performance Across Multiple Applications"
+    ],
+    image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80",
+    datasheetUrl: "/Datasheets/PELICAN-CHL 107.pdf"
+  },
+
+  // --- AHU / FCU ---
+  {
+    slug: "descaling-ahu-fcu",
+    name: "AHU & FCU Cleaning Chemical",
+    category: "Descaling Chemical",
+    categorySlug: "ahu-fcu-chemical",
+    shortDescription: "Specialized descaler for Air Handling and Fan Coil Units.",
+    overview: "Pelican Chemical offers a comprehensive range of industrial descaling chemicals designed to remove stubborn scale, rust, mineral deposits, and dirt. Designed to clean Air Handling Units (AHUs) and Fan Coil Units (FCUs), this formulation effectively removes dust, dirt, grease, and other contaminants from cooling fins and coils. Clean surfaces improve airflow, cooling efficiency, and indoor air quality.",
+    benefits: [
+      "Removes hard scale, rust, and mineral deposits",
+      "Restores heat transfer efficiency",
+      "Improves equipment performance",
+      "Reduces energy consumption",
+      "Minimizes maintenance downtime",
+      "Safe for a wide range of metal surfaces when used as recommended",
+      "Easy-to-use formulations for industrial cleaning",
+      "Extends equipment service life"
+    ],
+    applications: [
+      "AHU & FCU Coils",
+      "HVAC Systems",
+      "Heat Exchangers",
+      "Chillers",
+      "Cooling Towers",
+      "Boilers",
+      "Solar Water Heating Systems",
+      "Pipelines",
+      "Process Equipment",
+      "Industrial Manufacturing Plants"
+    ],
+    technicalHighlights: [
+      "Fast Scale Removal",
+      "Suitable for MS, SS & Copper",
+      "Restores Heat Transfer Efficiency & Improves Equipment Performance",
+      "Reduces Maintenance Downtime",
+      "Easy-to-Apply Formulation & Cost-Effective Industrial Cleaning",
+      "Reliable Performance Across Multiple Applications"
+    ],
+    image: "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80",
+    datasheetUrl: "/Datasheets/PELICAN-AHU.pdf"
   },
 
   // --- COOLING TOWER ---
@@ -601,86 +716,7 @@ export const products: Product[] = [
   },
 
   // --- DESCALING CHEMICAL ---
-  {
-    slug: "descaling-ahu-fcu",
-    name: "AHU & FCU Cleaning Chemical",
-    category: "Descaling Chemical",
-    categorySlug: "descaling-chemical",
-    shortDescription: "Specialized descaler for Air Handling and Fan Coil Units.",
-    overview: "Pelican Chemical offers a comprehensive range of industrial descaling chemicals designed to remove stubborn scale, rust, mineral deposits, and dirt. Designed to clean Air Handling Units (AHUs) and Fan Coil Units (FCUs), this formulation effectively removes dust, dirt, grease, and other contaminants from cooling fins and coils. Clean surfaces improve airflow, cooling efficiency, and indoor air quality.",
-    benefits: [
-      "Removes hard scale, rust, and mineral deposits",
-      "Restores heat transfer efficiency",
-      "Improves equipment performance",
-      "Reduces energy consumption",
-      "Minimizes maintenance downtime",
-      "Safe for a wide range of metal surfaces when used as recommended",
-      "Easy-to-use formulations for industrial cleaning",
-      "Extends equipment service life"
-    ],
-    applications: [
-      "AHU & FCU Coils",
-      "HVAC Systems",
-      "Heat Exchangers",
-      "Chillers",
-      "Cooling Towers",
-      "Boilers",
-      "Solar Water Heating Systems",
-      "Pipelines",
-      "Process Equipment",
-      "Industrial Manufacturing Plants"
-    ],
-    technicalHighlights: [
-      "Fast Scale Removal",
-      "Suitable for MS, SS & Copper",
-      "Restores Heat Transfer Efficiency & Improves Equipment Performance",
-      "Reduces Maintenance Downtime",
-      "Easy-to-Apply Formulation & Cost-Effective Industrial Cleaning",
-      "Reliable Performance Across Multiple Applications"
-    ],
-    image: "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80",
-    datasheetUrl: "/Datasheets/PELICAN-AHU.pdf"
-  },
-  {
-    slug: "descaling-chiller",
-    name: "Chiller Descaling Chemical",
-    category: "Descaling Chemical",
-    categorySlug: "descaling-chemical",
-    shortDescription: "Formulated for chiller tube and condenser cleaning.",
-    overview: "Pelican Chemical's descaling solutions dissolve mineral deposits quickly and safely, helping your systems operate at peak efficiency. Specially developed for chillers and cooling systems, this chemical removes scale and deposits from heat exchangers, helping restore cooling efficiency while reducing energy consumption and equipment wear.",
-    benefits: [
-      "Removes hard scale, rust, and mineral deposits",
-      "Restores heat transfer efficiency",
-      "Improves equipment performance",
-      "Reduces energy consumption",
-      "Minimizes maintenance downtime",
-      "Safe for a wide range of metal surfaces when used as recommended",
-      "Easy-to-use formulations for industrial cleaning",
-      "Extends equipment service life"
-    ],
-    applications: [
-      "Chillers",
-      "Heat Exchangers",
-      "Cooling Towers",
-      "Boilers",
-      "AHU & FCU Coils",
-      "HVAC Systems",
-      "Solar Water Heating Systems",
-      "Pipelines",
-      "Process Equipment",
-      "Industrial Manufacturing Plants"
-    ],
-    technicalHighlights: [
-      "Fast Scale Removal",
-      "Suitable for MS, SS & Copper",
-      "Restores Heat Transfer Efficiency & Improves Equipment Performance",
-      "Reduces Maintenance Downtime",
-      "Easy-to-Apply Formulation & Cost-Effective Industrial Cleaning",
-      "Reliable Performance Across Multiple Applications"
-    ],
-    image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80",
-    datasheetUrl: "/Datasheets/PELICAN-CHL 107.pdf"
-  },
+
   {
     slug: "descaling-solar-pipes",
     name: "Solar Pipe Cleaning Chemical",
@@ -721,7 +757,7 @@ export const products: Product[] = [
     image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
     datasheetUrl: "/downloads/Solar-Pipe-Descaling-TDS.pdf"
   },
-  {
+  /*{
     slug: "descaling-industrial-equipment",
     name: "Industrial Equipment Descaling",
     category: "Descaling Chemical",
@@ -760,7 +796,7 @@ export const products: Product[] = [
     ],
     image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
     datasheetUrl: "/downloads/Industrial-Equipment-Descaling-TDS.pdf"
-  }
+  }*/
 ];
 
 export function getProductBySlug(slug: string): Product | undefined {

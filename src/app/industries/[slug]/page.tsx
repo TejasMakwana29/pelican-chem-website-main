@@ -89,7 +89,7 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
           </div>
 
           <FadeIn className="mt-16">
-            <h2 className="heading-section">Recommended Products</h2>
+            {/*<h2 className="heading-section">Recommended Products</h2>
             <div className="mt-8 flex flex-wrap gap-3">
               {industry.products.map((product) => (
                 <span
@@ -99,7 +99,7 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
                   {product}
                 </span>
               ))}
-            </div>
+            </div>*/}
             <Link href="/products" className="btn-outline mt-8 inline-flex">
               Browse All Products
             </Link>

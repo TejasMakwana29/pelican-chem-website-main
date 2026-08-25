@@ -27,9 +27,9 @@ export function Logo({
   const { width, height, className: sizeClass } = sizes[variant];
   const src =
     variant === "mark"
-      ? "/images/pelican-mark.svg"
+      ? "/images/pelican-logo.png"
       : theme === "dark"
-        ? "/images/pelican-logo-light.svg"
+        ? "/images/pelican-logo.png"
         : "/images/pelican-logo.png";
 
   const image = (
