@@ -73,7 +73,7 @@ export const productCategories: ProductCategory[] = [
   // 7. Descaling Chemical
   {
     slug: "descaling-chemical",
-    name: "Descaling Chemical (Solar Pipe Cleaning)",
+    name: "Descaling Chemical (Copper and SS)",
     description: "Versatile descaling chemicals for AHU/FCU, chillers, solar pipes, and industrial equipment.",
     image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
   },
