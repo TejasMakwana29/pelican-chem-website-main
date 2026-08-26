@@ -41,7 +41,7 @@ export const productCategories: ProductCategory[] = [
   // 3. Cooling Tower Chemical
   {
     slug: "cooling-tower",
-    name: "Cooling Tower",
+    name: "Cooling Tower Chemical",
     description: "Cooling tower treatments for biofouling control, scale prevention, and corrosion inhibition.",
     image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80",
   },

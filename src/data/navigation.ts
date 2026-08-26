@@ -13,7 +13,7 @@ export const navigation: NavItem[] = [
       // Reordered exactly to your requested sequence
       { label: "RO Antiscalant Chemicals", href: "/products/ro-dosing-chemicals" },
       { label: "Sea Water", href: "/products/sea-water" },
-      { label: "Cooling Tower", href: "/products/cooling-tower" },
+      { label: "Cooling Tower Chemical", href: "/products/cooling-tower" },
       { label: "Boiler Chemical", href: "/products/boiler-chemical" },
       { label: "RO Descaling Chemicals", href: "/products/ro-descaling-chemicals" },
       { label: "Chiller Chemical", href: "/products/chiller-chemical" }, // Added
