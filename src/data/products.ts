@@ -25,7 +25,7 @@ export const productCategories: ProductCategory[] = [
   // 1. RO Antiscalant
   {
     slug: "ro-dosing-chemicals",
-    name: "RO Antiscalant Chemicals",
+    name: "RO Antiscalant Chemicals (PELICAN-301, 309, 309 H/S)",
     description: "High-performance antiscalants for optimal membrane protection and system efficiency.",
     image: "/images/RO-dosing.jpg",
   },
@@ -33,7 +33,7 @@ export const productCategories: ProductCategory[] = [
   // 2. Sea Water
   {
     slug: "sea-water",
-    name: "Sea Water",
+    name: "Sea Water (PELICAN-399)",
     description: "Specialized antiscalants engineered for the extreme challenges of seawater reverse osmosis.",
     image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80",
   },
@@ -41,7 +41,7 @@ export const productCategories: ProductCategory[] = [
   // 3. Cooling Tower Chemical
   {
     slug: "cooling-tower",
-    name: "Cooling Tower Chemical",
+    name: "Cooling Tower Chemical (PC-CT Series)",
     description: "Cooling tower treatments for biofouling control, scale prevention, and corrosion inhibition.",
     image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80",
   },
@@ -49,7 +49,7 @@ export const productCategories: ProductCategory[] = [
   // 4. Boiler Chemical
   {
     slug: "boiler-chemical",
-    name: "Boiler Chemical",
+    name: "Boiler Chemical (PELICAN-BLR)",
     description: "Comprehensive boiler water treatment chemicals for scale prevention and efficiency.",
     image: "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80",
   },
@@ -57,15 +57,15 @@ export const productCategories: ProductCategory[] = [
   // 5. RO Descaling Chemical
   {
     slug: "ro-descaling-chemicals",
-    name: "RO Descaling Chemicals",
+    name: "RO Descaling Chemicals (PELICAN DS-H17, DS-L17)",
     description: "Professional cleaning and descaling solutions for membrane performance recovery.",
     image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
   },
   
- // 6. Chiller Chemical (Newly Added)
+ // 6. Chiller Chemical
  {
     slug: "chiller-chemical",
-    name: "Chiller Chemical",
+    name: "Chiller Chemical (PELICAN-CHL 107)",
     description: "Versatile descaling chemicals for chillers and industrial equipment.",
     image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
   },
@@ -73,15 +73,15 @@ export const productCategories: ProductCategory[] = [
   // 7. Descaling Chemical
   {
     slug: "descaling-chemical",
-    name: "Descaling Chemical",
+    name: "Descaling Chemical (Solar Pipe Cleaning)",
     description: "Versatile descaling chemicals for AHU/FCU, chillers, solar pipes, and industrial equipment.",
     image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
   },
   
-  // 8. AHU / FCU (Newly Added)
+  // 8. AHU / FCU
   {
     slug: "ahu-fcu-chemical",
-    name: "AHU / FCU",
+    name: "AHU / FCU (PELICAN-AHU)",
     description: "Specialized cleaning chemicals for Air Handling and Fan Coil Units.",
     image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
   },
@@ -89,7 +89,7 @@ export const productCategories: ProductCategory[] = [
   // 9. ETP
   {
     slug: "etp",
-    name: "ETP",
+    name: "ETP (PELICAN-101)",
     description: "Effluent treatment plant chemicals for effective wastewater processing and compliance.",
     image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
   },
@@ -97,7 +97,7 @@ export const productCategories: ProductCategory[] = [
   // 10. EDTA
   {
     slug: "edta",
-    name: "EDTA",
+    name: "EDTA Chemical",
     description: "High-purity EDTA chelating agents for industrial cleaning and process applications.",
     image: "https://images.unsplash.com/photo-1532187863486-abf9db3881b5?w=800&q=80",
   },
@@ -285,6 +285,7 @@ export const products: Product[] = [
     image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80",
     datasheetUrl: "/downloads/PELICAN-399-TDS.pdf"
   },
+  
   // --- ETP ---
   {
     slug: "pelican-101",
@@ -376,7 +377,7 @@ export const products: Product[] = [
 
   // --- BOILER CHEMICAL ---
   {
-    slug: "pelican-br",
+    slug: "pelican-blr",
     name: "Boiler Chemical (PELICAN-BLR)",
     code: "PELICAN-BR 01/11",
     category: "Boiler Chemical",
@@ -486,9 +487,9 @@ export const products: Product[] = [
 
   // --- CHILLER CHEMICALS ---
   {
-    slug: "Chiller-Chemical",
+    slug: "pelican-chl-107", 
     name: "Chiller Chemical",
-    category: "RO Descaling Chemicals",
+    category: "Chiller Chemical",
     categorySlug: "chiller-chemical",
     shortDescription: "Formulated for chiller tube and condenser cleaning.",
     overview: "Pelican Chemical's descaling solutions dissolve mineral deposits quickly and safely, helping your systems operate at peak efficiency. Specially developed for chillers and cooling systems, this chemical removes scale and deposits from heat exchangers, helping restore cooling efficiency while reducing energy consumption and equipment wear.",
@@ -530,7 +531,7 @@ export const products: Product[] = [
   {
     slug: "descaling-ahu-fcu",
     name: "AHU & FCU Cleaning Chemical",
-    category: "Descaling Chemical",
+    category: "AHU / FCU",
     categorySlug: "ahu-fcu-chemical",
     shortDescription: "Specialized descaler for Air Handling and Fan Coil Units.",
     overview: "Pelican Chemical offers a comprehensive range of industrial descaling chemicals designed to remove stubborn scale, rust, mineral deposits, and dirt. Designed to clean Air Handling Units (AHUs) and Fan Coil Units (FCUs), this formulation effectively removes dust, dirt, grease, and other contaminants from cooling fins and coils. Clean surfaces improve airflow, cooling efficiency, and indoor air quality.",
@@ -573,7 +574,7 @@ export const products: Product[] = [
     slug: "pc-ct-sc1-309",
     name: "Anti-Scalant Cum Corrosion Inhibitor – PC CT SC1 309",
     code: "PC-CT-SC1",
-    category: "Cooling Tower",
+    category: "Cooling Tower Chemical",
     categorySlug: "cooling-tower",
     shortDescription: "A dual-action treatment that prevents scale buildup while protecting metal components from corrosion.",
     overview: "Pelican Chemical offers a comprehensive range of Cooling Tower Chemicals designed to protect industrial cooling systems from the three most common problems—scale formation, corrosion, and microbial growth. PC CT SC1 309 is a dual-action treatment that prevents scale buildup while protecting metal components from corrosion, ensuring maximum cooling efficiency.",
@@ -610,7 +611,7 @@ export const products: Product[] = [
     slug: "pc-ct-mb1-301",
     name: "Micro Biocide Chemical – PC CT MB1 301",
     code: "PC-CT-MB1",
-    category: "Cooling Tower",
+    category: "Cooling Tower Chemical",
     categorySlug: "cooling-tower",
     shortDescription: "Controls bacterial growth, biofilm, and harmful microorganisms.",
     overview: "Pelican Chemical's complete water treatment program helps maintain clean, protected cooling systems while minimizing downtime and operating costs. PC CT MB1 301 controls bacterial growth, biofilm, and harmful microorganisms that can reduce cooling tower performance and create hygiene concerns.",
@@ -646,7 +647,7 @@ export const products: Product[] = [
     slug: "pc-ct-alg-306",
     name: "Algae Preventive – PC CT ALG 306",
     code: "PC-CT-ALG",
-    category: "Cooling Tower",
+    category: "Cooling Tower Chemical",
     categorySlug: "cooling-tower",
     shortDescription: "Prevents algae formation that can block water flow and reduce heat exchange efficiency.",
     overview: "Cooling towers operate under demanding conditions where mineral deposits, corrosion, algae, and bacteria can significantly reduce system efficiency. PC CT ALG 306 prevents algae formation that can block water flow, reduce heat exchange efficiency, and increase maintenance requirements.",
@@ -682,7 +683,7 @@ export const products: Product[] = [
     slug: "pc-ct-ds1-399",
     name: "Cooling Tower Descaling Chemical – PC CT DS1 399",
     code: "PC-CT-DS1",
-    category: "Cooling Tower",
+    category: "Cooling Tower Chemical",
     categorySlug: "cooling-tower",
     shortDescription: "Removes existing scale and mineral deposits from heat exchange surfaces.",
     overview: "Pelican Chemical's complete water treatment program helps maintain clean, protected cooling systems while minimizing downtime and operating costs. PC CT DS1 399 removes existing scale and mineral deposits from heat exchange surfaces, restoring cooling efficiency and improving overall system performance.",
@@ -716,7 +717,6 @@ export const products: Product[] = [
   },
 
   // --- DESCALING CHEMICAL ---
-
   {
     slug: "descaling-solar-pipes",
     name: "Solar Pipe Cleaning Chemical",
@@ -757,7 +757,8 @@ export const products: Product[] = [
     image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
     datasheetUrl: "/downloads/Solar-Pipe-Descaling-TDS.pdf"
   },
-  /*{
+  /*
+  {
     slug: "descaling-industrial-equipment",
     name: "Industrial Equipment Descaling",
     category: "Descaling Chemical",
@@ -796,7 +797,8 @@ export const products: Product[] = [
     ],
     image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
     datasheetUrl: "/downloads/Industrial-Equipment-Descaling-TDS.pdf"
-  }*/
+  }
+  */
 ];
 
 export function getProductBySlug(slug: string): Product | undefined {
