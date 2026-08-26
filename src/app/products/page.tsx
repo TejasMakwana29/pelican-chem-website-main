@@ -38,6 +38,11 @@ export default function ProductsPage() {
               ? `/products/${category.slug}/${categoryProducts[0].slug}`
               : `/products/${category.slug}`;
 
+            // --- TEXT SPLITTING LOGIC ---
+            const nameParts = category.name.split(" (");
+            const mainName = nameParts[0]; 
+            const bracketText = nameParts.length > 1 ? "(" + nameParts[1] : null;
+
             return (
               <FadeIn key={category.slug} delay={index * 0.05}>
                 <Link
@@ -46,7 +51,7 @@ export default function ProductsPage() {
                 >
                   <Image
                     src={category.image}
-                    alt={category.name}
+                    alt={mainName}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                     sizes="(max-width: 1200px) 100vw, 1200px"
@@ -55,9 +60,17 @@ export default function ProductsPage() {
 
                   <div className="relative z-10 flex flex-col">
                     <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight">
-                      {category.name}
+                      {mainName}
                     </h2>
-                    <p className="text-aqua-300 text-sm mt-1 font-medium hidden sm:block">
+                    
+                    {/* BRACKET TEXT */}
+                    {bracketText && (
+                      <span className="text-slate-300 text-sm md:text-base font-medium mt-0.5">
+                        {bracketText}
+                      </span>
+                    )}
+                    
+                    <p className="text-aqua-300 text-xs md:text-sm mt-1 font-medium hidden sm:block">
                       {isSingleProduct ? "1 Product Available" : `${categoryProducts.length} Products Available`}
                     </p>
                   </div>
