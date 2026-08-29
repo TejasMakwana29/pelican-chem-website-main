@@ -372,7 +372,7 @@ export const products: Product[] = [
       "Available in Multiple Pack Sizes"
     ],
     image: "https://images.unsplash.com/photo-1532187863486-abf9db3881b5?w=800&q=80",
-    datasheetUrl: "/downloads/EDTA-TDS.pdf"
+    //datasheetUrl: "/downloads/EDTA-TDS.pdf"
   },
 
   // --- BOILER CHEMICAL ---

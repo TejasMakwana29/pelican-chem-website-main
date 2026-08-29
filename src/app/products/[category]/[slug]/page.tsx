@@ -42,14 +42,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
   return (
     <>
       <section className="relative flex min-h-[45vh] items-end overflow-hidden bg-navy">
-        <Image
-          src={product.image}
-          alt={product.name}
-          fill
-          className="object-cover opacity-40"
-          sizes="100vw"
-          priority
-        />
         <div className="section-padding relative w-full !pb-16">
           <div className="container-wide">
             <FadeIn>
@@ -82,8 +74,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 <p className="mt-6 text-body whitespace-pre-wrap">{product.overview}</p>
                 
                 {/* Functional Datasheet Download Button Moved Right After Description */}
-                <div className="mt-8">
-                  {product.datasheetUrl ? (
+                {product.datasheetUrl && (
+                  <div className="mt-8">
                     <a
                       href={product.datasheetUrl}
                       target="_blank"
@@ -94,12 +86,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
                       Download Technical Data Sheet (TDS)
                       <Download className="ml-2 h-4 w-4" />
                     </a>
-                  ) : (
-                    <p className="text-sm text-slate-500 italic bg-slate-50 p-4 rounded-lg border border-slate-100">
-                      Datasheet currently unavailable online. Please use the inquiry form to request documents.
-                    </p>
-                  )}
-                </div>
+                  </div>
+                )}
               </FadeIn>
 
               <FadeIn delay={0.1} className="mt-12">

@@ -38,14 +38,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   return (
     <>
       <section className="relative flex min-h-[40vh] items-end overflow-hidden bg-navy">
-        <Image
-          src={category.image}
-          alt={category.name}
-          fill
-          className="object-cover opacity-40"
-          sizes="100vw"
-          priority
-        />
+      
         <div className="section-padding relative w-full !pb-16">
           <div className="container-wide">
             <FadeIn>
