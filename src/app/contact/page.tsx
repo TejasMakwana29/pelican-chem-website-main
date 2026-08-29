@@ -107,9 +107,9 @@ export default function ContactPage() {
                   </div>
                 </div>
 
+                {/* Updated GST Section */}
                 <div className="mt-8 rounded-xl bg-slate-50 p-4 text-sm text-slate-600">
-                  <p>GST TIN: {company.gst}</p>
-                  <p className="mt-1">CST TIN: {company.cst}</p>
+                  <p>GSTIN: 24AIVPD4424G1ZC <br></br> Sterling Enterprise Rajkot</p>
                 </div>
               </FadeIn>
             </div>

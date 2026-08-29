@@ -2,6 +2,7 @@ export interface Product {
   slug: string;
   name: string;
   code?: string;
+  sidebarImage?: string;
   category: string;
   categorySlug: string;
   shortDescription: string;
@@ -107,6 +108,7 @@ export const products: Product[] = [
   // --- RO DOSING CHEMICALS ---
   {
     slug: "pelican-antiscalant-301",
+    sidebarImage: "/images/RO-dosing.jpg",
     name: "High pH RO Antiscalant (PELICAN-301)",
     code: "PELICAN-301",
     category: "RO Dosing Chemicals",
@@ -150,6 +152,8 @@ export const products: Product[] = [
     ],
     image: "https://images.unsplash.com/photo-1581093458791-9f3023e2d2b8?w=800&q=80",
     datasheetUrl: "/Datasheets/PELICAN-301.pdf"
+    
+
   },
   {
     slug: "pelican-antiscalant-309",
@@ -605,7 +609,7 @@ export const products: Product[] = [
       "Suitable for Open & Recirculating Cooling Systems"
     ],
     image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80",
-    datasheetUrl: "/downloads/PC-CT-SC1-309-TDS.pdf"
+    datasheetUrl: "/Datasheets/PELICAN-CT.pdf"
   },
   {
     slug: "pc-ct-mb1-301",
@@ -641,7 +645,7 @@ export const products: Product[] = [
       "Suitable for Open & Recirculating Cooling Systems"
     ],
     image: "https://images.unsplash.com/photo-1581093458791-9f3023e2d2b8?w=800&q=80",
-    datasheetUrl: "/downloads/PC-CT-MB1-301-TDS.pdf"
+    datasheetUrl: "/Datasheets/PELICAN-CT.pdf"
   },
   {
     slug: "pc-ct-alg-306",
@@ -677,7 +681,7 @@ export const products: Product[] = [
       "Suitable for Open & Recirculating Cooling Systems"
     ],
     image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
-    datasheetUrl: "/downloads/PC-CT-ALG-306-TDS.pdf"
+    datasheetUrl: "/Datasheets/PELICAN-CT.pdf"
   },
   {
     slug: "pc-ct-ds1-399",
@@ -713,7 +717,44 @@ export const products: Product[] = [
       "Suitable for Open & Recirculating Cooling Systems"
     ],
     image: "https://images.unsplash.com/photo-1532187863486-abf9db3881b5?w=800&q=80",
-    datasheetUrl: "/downloads/PC-CT-DS1-399-TDS.pdf"
+    datasheetUrl: "/Datasheets/PELICAN-CT.pdf"
+  },
+  {
+    slug: "TPH-booster",
+    name: "T.P.H Booster Chemical",
+    code: "TPH01",
+    category: "Cooling Tower Chemical",
+    categorySlug: "cooling-tower",
+    shortDescription: "A dual-action treatment that prevents scale buildup while protecting metal components from corrosion.",
+    overview: "Pelican Chemical offers a comprehensive range of Cooling Tower Chemicals designed to protect industrial cooling systems from the three most common problems—scale formation, corrosion, and microbial growth. PC CT SC1 309 is a dual-action treatment that prevents scale buildup while protecting metal components from corrosion, ensuring maximum cooling efficiency.",
+    benefits: [
+      "Prevents scale and mineral deposits",
+      "Protects metal surfaces from corrosion",
+      "Improves heat transfer efficiency",
+      "Reduces maintenance and cleaning frequency",
+      "Extends the service life of cooling tower equipment",
+      "Optimizes water usage and system performance"
+    ],
+    applications: [
+      "Industrial Cooling Towers",
+      "HVAC Cooling Systems",
+      "Power Plants",
+      "Chemical Processing Industries",
+      "Pharmaceutical Manufacturing",
+      "Food & Beverage Processing",
+      "Textile & Petrochemical Plants",
+      "Commercial Chiller Systems",
+      "Manufacturing Facilities"
+    ],
+    technicalHighlights: [
+      "Complete Cooling Water Treatment Program",
+      "Scale & Corrosion Protection",
+      "Restores Heat Transfer Efficiency",
+      "Reduces Maintenance Costs & Extends Equipment Life",
+      "Suitable for Open & Recirculating Cooling Systems"
+    ],
+    image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80",
+    datasheetUrl: "/Datasheets/PELICAN-CT.pdf"
   },
 
   // --- DESCALING CHEMICAL ---

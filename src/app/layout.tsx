@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: "/images/pelican-mark.svg",
+    icon: "/images/pelican-logo.png",
     apple: "/images/pelican-mark.svg",
   },
 };

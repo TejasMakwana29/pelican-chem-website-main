@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CheckCircle2, Download, FileText } from "lucide-react";
+import { CheckCircle2, Download, FileText, Image as ImageIcon } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { InquiryForm } from "@/components/ui/Forms";
 import { getProductBySlug, products } from "@/data/products";
@@ -39,6 +39,11 @@ export default async function ProductPage({ params }: ProductPageProps) {
     ? `${product.name} (${product.code})`
     : product.name;
 
+  // OPTION FOR A DIFFERENT IMAGE: 
+  // It checks if you defined a 'sidebarImage' in your product data. 
+  // If not, it safely falls back to the default 'product.image'.
+  const displayImage = product.sidebarImage || product.image;
+
   return (
     <>
       <section className="relative flex min-h-[45vh] items-end overflow-hidden bg-navy">
@@ -68,12 +73,13 @@ export default async function ProductPage({ params }: ProductPageProps) {
       <section className="section-padding bg-white">
         <div className="container-wide">
           <div className="grid gap-16 lg:grid-cols-3">
+            
+            {/* LEFT COLUMN: 2/3 Width - Product Details */}
             <div className="lg:col-span-2">
               <FadeIn>
                 <h2 className="heading-section">Product Overview</h2>
                 <p className="mt-6 text-body whitespace-pre-wrap">{product.overview}</p>
                 
-                {/* Functional Datasheet Download Button Moved Right After Description */}
                 {product.datasheetUrl && (
                   <div className="mt-8">
                     <a
@@ -143,7 +149,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-slate-200">
-                        {/* TYPE ERROR FIXED HERE */}
                         {product.specifications.map((spec: { property: string; specification: string }) => (
                           <tr key={spec.property} className="hover:bg-slate-50/50">
                             <td className="px-6 py-4 font-medium">{spec.property}</td>
@@ -157,7 +162,28 @@ export default async function ProductPage({ params }: ProductPageProps) {
               )}
             </div>
 
+            {/* RIGHT COLUMN: 1/3 Width - Images & Form */}
             <div>
+              {/* --- SINGLE IMAGE SECTION --- */}
+              <FadeIn direction="right" className="mb-8">
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
+                  {displayImage ? (
+                    <Image
+                      src={displayImage}
+                      alt={displayName}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 33vw"
+                    />
+                  ) : (
+                    <div className="flex h-full w-full flex-col items-center justify-center text-slate-400">
+                      <ImageIcon className="mb-2 h-8 w-8 opacity-50" />
+                      <span className="text-sm">Image Coming Soon</span>
+                    </div>
+                  )}
+                </div>
+              </FadeIn>
+              {/* INQUIRY FORM */}
               <FadeIn direction="right">
                 <div className="sticky top-28 rounded-2xl bg-slate-50 p-8 border border-slate-100 shadow-sm">
                   <h3 className="heading-sub">Product Inquiry</h3>
@@ -170,6 +196,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 </div>
               </FadeIn>
             </div>
+            
           </div>
         </div>
       </section>

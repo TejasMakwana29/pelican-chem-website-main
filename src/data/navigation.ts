@@ -24,10 +24,12 @@ export const navigation: NavItem[] = [
     ],
   },
   { label: "Industries", href: "/industries" },
-  { label: "Case Study", href: "/case-studies" },
-  { label: "About Us", href: "/about" },
-  { label: "Contact", href: "/contact" },
   { label: "Application", href: "/application" },
+  { label: "Case Study", href: "/case-study" },
+  { label: "About Us", href: "/about" },
+   // Added Download Tab
+  { label: "Contact", href: "/contact" },
+  { label: "Downloads", href: "/download" },
 ];
 
 export const sitemap = [
@@ -49,6 +51,7 @@ export const sitemap = [
   { path: "/industries", title: "Industries We Serve", priority: 0.8 },
   { path: "/case-studies", title: "Case Studies", priority: 0.8 },
   { path: "/about", title: "About Us", priority: 0.9 },
+  { path: "/download", title: "Downloads & Certificates", priority: 0.8 }, // Added to Sitemap
   { path: "/contact", title: "Contact", priority: 0.8 },
   { path: "/application", title: "Application", priority: 0.8 },
   { path: "/custom-label", title: "Custom Label Solutions", priority: 0.7 },

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, Download, Mail } from "lucide-react"; // Added Mail icon
 import { useState } from "react";
 
 interface InquiryFormProps {
@@ -96,7 +96,6 @@ export function InquiryForm({ productName, compact = false }: InquiryFormProps) 
             type="email"
             id="email"
             name="email"
-            // "required" is completely removed from here
             className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-navy transition-colors focus:border-aqua focus:outline-none focus:ring-2 focus:ring-aqua/20"
             placeholder="your@email.com"
           />
@@ -197,6 +196,7 @@ export function ContactCTA() {
     </section>
   );
 }
+
 export function RFQForm() {
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -310,6 +310,85 @@ export function RFQForm() {
           {isSubmitting ? "Sending..." : "Submit RFQ"}
         </button>
       </div>
+    </form>
+  );
+}
+
+// --- NEW COMPONENT FOR CERTIFICATE GATING ---
+
+interface DownloadFormProps {
+  onSuccess: () => void;
+}
+
+export function DownloadForm({ onSuccess }: DownloadFormProps) {
+  const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setError("");
+
+    try {
+      // Pointing to your existing API route
+      const response = await fetch("/api/quote", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          // Defaulting required fields so the API doesn't fail
+          name: "Certificate Download Request",
+          phone: "N/A", 
+          company: "Download Gateway",
+          email: email,
+          message: `A visitor has requested certificate download access. Email provided: ${email}`,
+        }),
+      });
+
+      if (response.ok) {
+        onSuccess();
+      } else {
+        setError("Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      console.error("Submission error:", err);
+      setError("Failed to connect to the server.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="mt-8 space-y-4">
+      <div>
+        <label htmlFor="download-email" className="sr-only">Email Address</label>
+        <div className="relative">
+          <Mail className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400" />
+          <input
+            type="email"
+            id="download-email"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter your email address"
+            className="w-full rounded-xl border border-slate-300 py-3 pl-12 pr-4 outline-none transition-colors focus:border-aqua focus:ring-1 focus:ring-aqua"
+          />
+        </div>
+      </div>
+      
+      {error && (
+        <p className="text-sm text-red-500 text-center">{error}</p>
+      )}
+
+      <button
+        type="submit"
+        disabled={isLoading}
+        className="w-full rounded-xl bg-navy py-3 font-semibold text-white transition-colors hover:bg-aqua disabled:opacity-70"
+      >
+        {isLoading ? "Verifying..." : "Unlock Certificates"}
+      </button>
     </form>
   );
 }
