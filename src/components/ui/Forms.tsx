@@ -11,10 +11,43 @@ interface InquiryFormProps {
 
 export function InquiryForm({ productName, compact = false }: InquiryFormProps) {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setErrorMessage(null);
+
+    const formData = new FormData(e.currentTarget);
+    
+    // Package the data for the API
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      // We pass the product name as the "company" so it shows up neatly in your email subject line
+      company: productName ? `Product: ${productName}` : "General Inquiry",
+      message: formData.get("message"),
+    };
+
+    try {
+      const response = await fetch("/api/quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setSubmitted(true); // Show the success message
+      } else {
+        setErrorMessage("Something went wrong. Please try again or contact us directly.");
+      }
+    } catch (error) {
+      setErrorMessage("Network error. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -33,6 +66,14 @@ export function InquiryForm({ productName, compact = false }: InquiryFormProps) 
       {productName && (
         <input type="hidden" name="product" value={productName} />
       )}
+      
+      {/* Error Message Display */}
+      {errorMessage && (
+        <div className="rounded-lg bg-red-50 p-4 text-sm text-red-600 border border-red-200">
+          {errorMessage}
+        </div>
+      )}
+
       <div className={compact ? "grid gap-4 sm:grid-cols-2" : "grid gap-6 sm:grid-cols-2"}>
         <div>
           <label htmlFor="name" className="mb-2 block text-sm font-medium text-navy">
@@ -49,20 +90,19 @@ export function InquiryForm({ productName, compact = false }: InquiryFormProps) 
         </div>
         <div>
           <label htmlFor="email" className="mb-2 block text-sm font-medium text-navy">
-            Email *
+            Email (Optional)
           </label>
           <input
             type="email"
             id="email"
             name="email"
-            required
+            // "required" is completely removed from here
             className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-navy transition-colors focus:border-aqua focus:outline-none focus:ring-2 focus:ring-aqua/20"
             placeholder="your@email.com"
           />
         </div>
       </div>
       
-      {/* PHONE FIELD UPDATED TO BE MANDATORY */}
       <div>
         <label htmlFor="phone" className="mb-2 block text-sm font-medium text-navy">
           Phone *
@@ -104,9 +144,13 @@ export function InquiryForm({ productName, compact = false }: InquiryFormProps) 
           placeholder="Tell us about your requirements..."
         />
       </div>
-      <button type="submit" className="btn-primary w-full sm:w-auto">
-        Submit Inquiry
-        <ArrowRight className="ml-2 h-4 w-4" />
+      <button 
+        type="submit" 
+        disabled={isSubmitting}
+        className="btn-primary w-full sm:w-auto disabled:opacity-70 disabled:cursor-not-allowed"
+      >
+        {isSubmitting ? "Sending..." : "Submit Inquiry"}
+        {!isSubmitting && <ArrowRight className="ml-2 h-4 w-4" />}
       </button>
     </form>
   );
@@ -151,5 +195,121 @@ export function ContactCTA() {
         </div>
       </div>
     </section>
+  );
+}
+export function RFQForm() {
+  const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setErrorMessage(null);
+
+    const formData = new FormData(e.currentTarget);
+    
+    const requirementType = formData.get("requirementType");
+    const volume = formData.get("volume");
+    const combinedMessage = `Requirement Type: ${requirementType}\nMonthly Volume: ${volume}`;
+
+    const data = {
+      name: formData.get("name"),
+      phone: formData.get("phone"),
+      company: formData.get("company") || "Not provided",
+      email: formData.get("email") || "",
+      message: combinedMessage,
+    };
+
+    try {
+      const response = await fetch("/api/quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        setErrorMessage("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      setErrorMessage("Network error. Please check your connection.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  if (submitted) {
+    return (
+      <div className="rounded-2xl bg-blue-50 p-8 text-center border border-blue-100 h-full flex flex-col justify-center">
+        <h3 className="text-2xl font-bold text-blue-900">RFQ Received!</h3>
+        <p className="mt-2 text-blue-700">
+          Thank you for your request. Our sales team will contact you shortly with bulk pricing.
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-5 items-end w-full">
+      {errorMessage && (
+        <div className="md:col-span-2 lg:col-span-4 rounded-lg bg-red-50 p-4 text-sm text-red-600 border border-red-200">
+          {errorMessage}
+        </div>
+      )}
+      
+      {/* 1. NAME FIELD */}
+      <div>
+        <label className="block text-sm font-bold text-gray-700 mb-2">Name <span className="text-red-500">*</span></label>
+        <input type="text" name="name" required className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all bg-white" placeholder="John Doe" />
+      </div>
+      
+      {/* 2. PHONE FIELD */}
+      <div>
+        <label className="block text-sm font-bold text-gray-700 mb-2">Contact Number <span className="text-red-500">*</span></label>
+        <input type="tel" name="phone" required className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all bg-white" placeholder="+91 XXXX XXXXX" />
+      </div>
+      
+      {/* 3. COMPANY FIELD */}
+      <div>
+        <label className="block text-sm font-bold text-gray-700 mb-2">Company Name</label>
+        <input type="text" name="company" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all bg-white" placeholder="Acme Industries" />
+      </div>
+      
+      {/* 4. EMAIL FIELD */}
+      <div>
+        <label className="block text-sm font-bold text-gray-700 mb-2">Email (Optional)</label>
+        <input type="email" name="email" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all bg-white" placeholder="john@company.com" />
+      </div>
+
+      {/* 5. REQUIREMENT TYPE DROPDOWN */}
+      <div>
+        <label className="block text-sm font-bold text-gray-700 mb-2">Requirement Type</label>
+        <select name="requirementType" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all bg-white appearance-none">
+          <option value="Bulk Chemical Supply">Bulk Chemical Supply</option>
+          <option value="Private Label (OEM)">Private Label (OEM)</option>
+          <option value="Turnkey Plant (EPC)">Turnkey Plant (EPC)</option>
+          <option value="Technical Consultation">Technical Consultation</option>
+        </select>
+      </div>
+
+      {/* 6. MONTHLY VOLUME FIELD */}
+      <div className="lg:col-span-2">
+        <label className="block text-sm font-bold text-gray-700 mb-2">Monthly Volume <span className="text-red-500">*</span></label>
+        <input type="text" name="volume" required className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all bg-white" placeholder="E.g., 2000 Liters, 500 Kg, etc." />
+      </div>
+      
+      {/* 7. SUBMIT BUTTON */}
+      <div>
+        <button 
+          type="submit" 
+          disabled={isSubmitting}
+          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-extrabold py-3 px-6 rounded-xl transition-all shadow-md hover:shadow-lg text-lg h-[50px] flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
+        >
+          {isSubmitting ? "Sending..." : "Submit RFQ"}
+        </button>
+      </div>
+    </form>
   );
 }

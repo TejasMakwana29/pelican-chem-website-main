@@ -1,5 +1,6 @@
 import { FormulationFinder } from "@/components/ui/FormulationFinder";
 import { HeroSection } from "@/components/sections/HomeSections";
+import { RFQForm } from "@/components/ui/Forms";
 import Link from "next/link";
 import Image from "next/image"; // ADDED THIS IMPORT
 import { ShieldCheck, Zap, Building2 } from "lucide-react";
@@ -195,49 +196,9 @@ export default function HomePage() {
               </div>
             </div>
             
-            <form className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-5 items-end">
-              {/* Mandatory Fields */}
-              <div>
-                <label className="block text-sm font-bold text-gray-700 mb-2">Name <span className="text-red-500">*</span></label>
-                <input type="text" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all bg-white" placeholder="John Doe" required />
-              </div>
-              <div>
-                <label className="block text-sm font-bold text-gray-700 mb-2">Contact Number <span className="text-red-500">*</span></label>
-                <input type="tel" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all bg-white" placeholder="+91 XXXX XXXXX" required />
-              </div>
-              
-              {/* Non-Mandatory Fields */}
-              <div>
-                <label className="block text-sm font-bold text-gray-700 mb-2">Company Name</label>
-                <input type="text" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all bg-white" placeholder="Acme Industries" />
-              </div>
-              <div>
-                <label className="block text-sm font-bold text-gray-700 mb-2">Email</label>
-                <input type="email" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all bg-white" placeholder="john@company.com" />
-              </div>
-
-              <div>
-                <label className="block text-sm font-bold text-gray-700 mb-2">Requirement Type</label>
-                <select className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all bg-white appearance-none">
-                  <option>Bulk Chemical Supply</option>
-                  <option>Private Label (OEM)</option>
-                  <option>Turnkey Plant (EPC)</option>
-                  <option>Technical Consultation</option>
-                </select>
-              </div>
-
-              {/* Mandatory Monthly Volume */}
-              <div className="lg:col-span-2">
-                <label className="block text-sm font-bold text-gray-700 mb-2">Monthly Volume <span className="text-red-500">*</span></label>
-                <input type="text" className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-4 focus:ring-blue-100 focus:border-blue-600 outline-none transition-all bg-white" placeholder="E.g., 2000 Liters, 500 Kg, etc." required />
-              </div>
-              
-              <div>
-                <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-extrabold py-3 px-6 rounded-xl transition-all shadow-md hover:shadow-lg text-lg h-[50px] flex items-center justify-center">
-                  Submit RFQ
-                </button>
-              </div>
-            </form>
+            {/* The old HTML form is gone, replaced by our new smart component! */}
+            <RFQForm />
+            
           </div>
         </div>
       </section>
