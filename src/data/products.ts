@@ -34,7 +34,7 @@ export const productCategories: ProductCategory[] = [
   // 2. Sea Water
   {
     slug: "sea-water",
-    name: "Sea Water (PELICAN-399)",
+    name: "Sea Water Chemical (PELICAN-399)",
     description: "Specialized antiscalants engineered for the extreme challenges of seawater reverse osmosis.",
     image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80",
   },
@@ -74,7 +74,7 @@ export const productCategories: ProductCategory[] = [
   // 7. Descaling Chemical
   {
     slug: "descaling-chemical",
-    name: "Descaling Chemical (Copper and SS)",
+    name: "Descaling Chemical (Copper, SS, MS and all metals)",
     description: "Versatile descaling chemicals for AHU/FCU, chillers, solar pipes, and industrial equipment.",
     image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
   },
@@ -93,6 +93,13 @@ export const productCategories: ProductCategory[] = [
     name: "ETP (PELICAN-101)",
     description: "Effluent treatment plant chemicals for effective wastewater processing and compliance.",
     image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
+  },
+// 11 Industrial And commercial water plant
+  {
+    slug: "industrial-commercial-water-plant",
+    name: "Industrial and Commercial Water Plant",
+    description: "Turnkey water treatment solutions including RO, ETP, and STP plants for industrial and commercial applications.",
+    image: "/images/OSMOSIS.webp",
   },
   
   // 10. EDTA
@@ -241,7 +248,7 @@ export const products: Product[] = [
       "Advanced formulation includes biocide support to help control unpleasant odours"
     ],
     image: "https://images.unsplash.com/photo-1532187863486-abf9db3881b5?w=800&q=80",
-    datasheetUrl: "/downloads/PELICAN-309-HS-TDS.pdf"
+    datasheetUrl: "/Datasheets/PELICAN-309.pdf"
   },
 
   // --- SEA WATER ---
@@ -383,7 +390,7 @@ export const products: Product[] = [
   {
     slug: "pelican-blr",
     name: "Boiler Chemical (PELICAN-BLR)",
-    code: "PELICAN-BR 01/11",
+    code: "PELICAN-BLR",
     category: "Boiler Chemical",
     categorySlug: "boiler-chemical",
     shortDescription: "Advanced Boiler Water Treatment for Cleaner, More Efficient Operations",
@@ -720,9 +727,9 @@ export const products: Product[] = [
     datasheetUrl: "/Datasheets/PELICAN-CT.pdf"
   },
   {
-    slug: "TPH-booster",
-    name: "T.P.H Booster Chemical",
-    code: "TPH01",
+    slug: "PH-booster",
+    name: "PH Booster Chemical",
+    code: "PH Booster",
     category: "Cooling Tower Chemical",
     categorySlug: "cooling-tower",
     shortDescription: "A dual-action treatment that prevents scale buildup while protecting metal components from corrosion.",
@@ -760,11 +767,11 @@ export const products: Product[] = [
   // --- DESCALING CHEMICAL ---
   {
     slug: "descaling-solar-pipes",
-    name: "Solar Pipe Cleaning Chemical",
+    name: "Descaling Chemical (Copper, SS, MS and all metals)",
     category: "Descaling Chemical",
     categorySlug: "descaling-chemical",
-    shortDescription: "Scale remover for solar water heating systems.",
-    overview: "Pelican Chemical's descaling solutions dissolve deposits quickly and safely to restore system efficiency. Engineered to eliminate scale and mineral buildup inside solar water heating pipelines, ensuring smooth water circulation and improved thermal efficiency.",
+    shortDescription: "Versatile scale remover engineered for copper, stainless steel, and all metal surfaces.",
+    overview: "Pelican Chemical's descaling solutions dissolve deposits quickly and safely to restore system efficiency. Engineered to eliminate scale and mineral buildup across copper, stainless steel (SS), and all other metal surfaces, ensuring optimal heat transfer and unimpeded flow without damaging your equipment.",
     benefits: [
       "Removes hard scale, rust, and mineral deposits",
       "Restores heat transfer efficiency",
@@ -796,8 +803,9 @@ export const products: Product[] = [
       "Reliable Performance Across Multiple Applications"
     ],
     image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
-    datasheetUrl: "/downloads/Solar-Pipe-Descaling-TDS.pdf"
+    datasheetUrl: "/Datasheets/Descaling-Chemical.pdf"
   },
+
   /*
   {
     slug: "descaling-industrial-equipment",
@@ -840,6 +848,42 @@ export const products: Product[] = [
     datasheetUrl: "/downloads/Industrial-Equipment-Descaling-TDS.pdf"
   }
   */
+
+  // --- INDUSTRIAL AND COMMERCIAL WATER PLANT ---
+  {
+    slug: "turnkey-ro-plant",
+    name: "Industrial RO SYSTEM",
+    code: "INDUSTRIAL-RO-PLANT",
+    category: "Industrial and Commercial Water Plant",
+    categorySlug: "industrial-commercial-water-plant",
+    shortDescription: "Reliable, easy-to-operate Reverse Osmosis (RO) plants designed for streamlined industrial water purification.",
+    overview: "Pelican Chemical manufactures reliable and easy-to-operate Industrial Reverse Osmosis (RO) Plants designed specifically for manufacturing and processing facilities. Built to handle standard industrial feed water conditions, our RO systems deliver consistent, high-purity water while keeping daily operation simple and maintenance requirements low.\n\nEngineered with durable components and straightforward controls, these plants are the perfect solution for generating quality process water or boiler feed water without the headaches of overly complex systems.",
+    benefits: [
+      "High water recovery rates and optimized efficiency",
+      "Energy-efficient operation lowering overall costs",
+      "Customizable capacities ranging from 500 LPH to 100,000+ LPH",
+      "Robust PLC-based automation for minimal manual intervention",
+      "Durable skid-mounted design for easy installation",
+      "Comprehensive after-sales support and maintenance"
+    ],
+    applications: [
+      "Manufacturing Facilities",
+      "Pharmaceutical Processing",
+      "Textile & Dyeing Industries",
+      "Food & Beverage Production",
+      "Commercial Complexes & Hotels",
+      "Hospitals & Healthcare Facilities"
+    ],
+    technicalHighlights: [
+      "Fully Automated Clean-In-Place (CIP) System",
+      "Advanced Pre-treatment Integration (Sand/Carbon Filters)",
+      "High-quality SS 316 / FRP pressure vessels",
+      "Energy-efficient high-pressure pumps",
+      "Real-time water quality monitoring (TDS/pH sensors)"
+    ],
+    image: "/images/OSMOSIS.webp",
+    datasheetUrl: "/Datasheets/Industrial-RO-System.pdf"
+  },
 ];
 
 export function getProductBySlug(slug: string): Product | undefined {

@@ -12,7 +12,7 @@ export const navigation: NavItem[] = [
     children: [
       // Reordered exactly to your requested sequence
       { label: "RO Antiscalant Chemicals", href: "/products/ro-dosing-chemicals" },
-      { label: "Sea Water", href: "/products/sea-water" },
+      { label: "Sea Water Chemical", href: "/products/sea-water" },
       { label: "Cooling Tower Chemical", href: "/products/cooling-tower" },
       { label: "Boiler Chemical", href: "/products/boiler-chemical" },
       { label: "RO Descaling Chemicals", href: "/products/ro-descaling-chemicals" },
@@ -20,6 +20,7 @@ export const navigation: NavItem[] = [
       { label: "Descaling Chemical", href: "/products/descaling-chemical" },
       { label: "AHU / FCU", href: "/products/ahu-fcu-chemical" }, // Added
       { label: "ETP", href: "/products/etp" },
+      { label: "Industrial and Commercial Water plant", href: "/products/industrial-commercial-water-plant" },
       { label: "EDTA", href: "/products/edta" },
     ],
   },

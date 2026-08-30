@@ -24,52 +24,48 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Category 1 */}
-            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 hover:shadow-lg transition-all duration-300 flex flex-col h-full">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">RO Membrane Performance</h3>
+            <Link href="/products" className="group bg-white rounded-2xl shadow-sm border border-gray-100 p-8 hover:shadow-lg hover:border-blue-200 hover:-translate-y-1 transition-all duration-300 flex flex-col h-full cursor-pointer">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">RO Membrane Performance</h3>
               <div className="mb-8 flex-grow">
-                <p className="font-semibold text-sm text-gray-900 mb-2"></p>
-                <p className="text-sm text-gray-600 leading-relaxed">Antiscalants (PELICAN-301, PELICAN-309), Membrane Cleaners, and Biocides.</p>
+                <p className="text-sm text-gray-600 leading-relaxed">Antiscalants (PELICAN-301, PELICAN-309/High Silica), Sea water Antiscalant, Membrane Cleaners, and Biocides.</p>
               </div>
-              <Link href="/products/ro-chemicals" className="mt-auto inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors">
-                View RO Solutions <span className="ml-2">→</span>
-              </Link>
-            </div>
+              <span className="mt-auto inline-flex items-center text-blue-600 font-semibold group-hover:text-blue-800 transition-colors">
+                View RO Solutions <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+              </span>
+            </Link>
 
             {/* Category 2 */}
-            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 hover:shadow-lg transition-all duration-300 flex flex-col h-full">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Boiler, Chiller & Cooling Tower</h3>
+            <Link href="/products" className="group bg-white rounded-2xl shadow-sm border border-gray-100 p-8 hover:shadow-lg hover:border-blue-200 hover:-translate-y-1 transition-all duration-300 flex flex-col h-full cursor-pointer">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">Boiler, Chiller & Cooling Tower</h3>
               <div className="mb-8 flex-grow">
-                <p className="font-semibold text-sm text-gray-900 mb-2"></p>
                 <p className="text-sm text-gray-600 leading-relaxed">Chiller Scaling Problem Solvers, Scale & Corrosion Inhibitors, Oxygen Scavengers, and Biocides.</p>
               </div>
-              <Link href="/products/thermal-solutions" className="mt-auto inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors">
-                View Thermal Solutions <span className="ml-2">→</span>
-              </Link>
-            </div>
+              <span className="mt-auto inline-flex items-center text-blue-600 font-semibold group-hover:text-blue-800 transition-colors">
+                View Thermal Solutions <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+              </span>
+            </Link>
 
             {/* Category 3 */}
-            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 hover:shadow-lg transition-all duration-300 flex flex-col h-full">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Specialty & Heavy Industrial</h3>
+            <Link href="/products" className="group bg-white rounded-2xl shadow-sm border border-gray-100 p-8 hover:shadow-lg hover:border-blue-200 hover:-translate-y-1 transition-all duration-300 flex flex-col h-full cursor-pointer">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">Specialty & Heavy Industrial</h3>
               <div className="mb-8 flex-grow">
-                <p className="font-semibold text-sm text-gray-900 mb-2"></p>
                 <p className="text-sm text-gray-600 leading-relaxed">Copper, SS and all types of Metal Descaling chemical (AHU,FCU)</p>
               </div>
-              <Link href="/products/specialty-chemicals" className="mt-auto inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors">
-                View Specialty Chemicals <span className="ml-2">→</span>
-              </Link>
-            </div>
+              <span className="mt-auto inline-flex items-center text-blue-600 font-semibold group-hover:text-blue-800 transition-colors">
+                View Specialty Chemicals <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+              </span>
+            </Link>
 
             {/* Category 4 */}
-            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 hover:shadow-lg transition-all duration-300 flex flex-col h-full">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Wastewater & ETP Formulations</h3>
+            <Link href="/products" className="group bg-white rounded-2xl shadow-sm border border-gray-100 p-8 hover:shadow-lg hover:border-blue-200 hover:-translate-y-1 transition-all duration-300 flex flex-col h-full cursor-pointer">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">Wastewater & ETP Formulations</h3>
               <div className="mb-8 flex-grow">
-                <p className="font-semibold text-sm text-gray-900 mb-2"></p>
                 <p className="text-sm text-gray-600 leading-relaxed">Coagulants, Flocculants, Decolorizing agents, and pH adjusters for industrial effluents.</p>
               </div>
-              <Link href="/products/etp-chemicals" className="mt-auto inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors">
-                View ETP Solutions <span className="ml-2">→</span>
-              </Link>
-            </div>
+              <span className="mt-auto inline-flex items-center text-blue-600 font-semibold group-hover:text-blue-800 transition-colors">
+                View ETP Solutions <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+              </span>
+            </Link>
           </div>
         </div>
       </section>

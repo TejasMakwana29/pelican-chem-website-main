@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FlaskConical, Factory, Tag, Building2, BookOpenText, ArrowRight } from "lucide-react";
+import { FlaskConical, Factory, Tag, BookOpenText, ArrowRight } from "lucide-react";
 
 export default function ApplicationPage() {
   return (
@@ -32,10 +32,17 @@ export default function ApplicationPage() {
               </ul>
             </div>
             <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold mb-4">Boiler & Cooling Water</h3>
+              <h3 className="text-xl font-bold mb-4">Boiler & Cooling Tower</h3>
               <ul className="space-y-2 text-gray-600">
                 <li>Boiler Treatment Chemicals</li>
                 <li>Cooling Tower Chemicals</li>
+              </ul>
+            </div>
+            <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
+              <h3 className="text-xl font-bold mb-4">Descaling and Clensing Chemical</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>Copper, SS, MS and all types of metal</li>
+                <li><b>AHU-FCU Chemical</b></li>
               </ul>
             </div>
             <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
@@ -46,6 +53,7 @@ export default function ApplicationPage() {
                 <li>General Descaling Chemicals</li>
               </ul>
             </div>
+            
           </div>
         </section>
 
@@ -60,10 +68,6 @@ export default function ApplicationPage() {
               <h3 className="text-xl font-bold mb-2">Water Treatment Plants (WTP)</h3>
               <p className="text-gray-600">Comprehensive hardware solutions for high-quality water production.</p>
             </div>
-            {/*<div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
-              <h3 className="text-xl font-bold mb-2">Sewage Treatment Plants (STP)</h3>
-              <p className="text-gray-600">Efficient systems designed for municipal and commercial sewage management.</p>
-            </div>*/}
             <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
               <h3 className="text-xl font-bold mb-2">Effluent Treatment Plants (ETP)</h3>
               <p className="text-gray-600">Customized plants to handle industrial wastewater discharge compliance.</p>
@@ -100,15 +104,27 @@ export default function ApplicationPage() {
               <BookOpenText className="w-6 h-6 text-blue-600" />
               <h2 className="text-2xl font-bold">4. Technical Resources & Support</h2>
             </div>
-            <ul className="space-y-4">
-              
-              <li><Link href="/water-analysis" className="text-blue-600 font-semibold hover:underline">Water Analysis Request →</Link></li>
+            <ul className="space-y-6">
+              <li>
+                <Link href="/sds" className="group inline-flex items-center gap-1 text-blue-600 font-semibold text-lg hover:underline">
+                  Product Safety Data Sheets (SDS) <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+                <p className="text-gray-600 mt-1">Essential documentation for chemical B2B sales and regulatory compliance.</p>
+              </li>
+              <li>
+                <Link href="/water-analysis" className="group inline-flex items-center gap-1 text-blue-600 font-semibold text-lg hover:underline">
+                  Water Analysis Request <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+                <p className="text-gray-600 mt-1">A dedicated lead-generation tool to help us tailor the perfect solution for your plant.</p>
+              </li>
+            
             </ul>
           </div>
-          <div className="bg-gray-900 text-white p-8 rounded-2xl">
+          
+          <div className="bg-gray-900 text-white p-8 rounded-2xl h-fit">
             <h3 className="text-xl font-bold mb-4">Contact Our Rajkot Headquarters</h3>
             <p className="text-gray-400">Reach out for inquiries, contract pricing, or partnership opportunities.</p>
-            <Link href="/contact" className="mt-6 inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700">
+            <Link href="/contact" className="mt-6 inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors">
               Get in Touch <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

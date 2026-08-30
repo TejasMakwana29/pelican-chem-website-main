@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { CheckCircle2, Download, FileText, Image as ImageIcon } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { InquiryForm } from "@/components/ui/Forms";
-import { getProductBySlug, products } from "@/data/products";
+import { getProductBySlug, getProductsByCategory, products } from "@/data/products";
 
 interface ProductPageProps {
   params: Promise<{ category: string; slug: string }>;
@@ -39,6 +39,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
     ? `${product.name} (${product.code})`
     : product.name;
 
+  // STEP 2: We count the products in this category right here
+  const categoryProducts = getProductsByCategory(category);
+
   // OPTION FOR A DIFFERENT IMAGE: 
   // It checks if you defined a 'sidebarImage' in your product data. 
   // If not, it safely falls back to the default 'product.image'.
@@ -50,12 +53,15 @@ export default async function ProductPage({ params }: ProductPageProps) {
         <div className="section-padding relative w-full !pb-16">
           <div className="container-wide">
             <FadeIn>
+              
+              {/* STEP 3: The updated smart Back Button */}
               <Link
-                href={`/products/${category}`}
+                href={categoryProducts.length === 1 ? "/products" : `/products/${category}`}
                 className="text-sm font-medium text-aqua-300 hover:text-white"
               >
-                ← Back to Category
+                {categoryProducts.length === 1 ? "← Back to All Categories" : "← Back to Category"}
               </Link>
+              
               {product.code && (
                 <span className="ml-4 rounded-full bg-aqua/20 px-3 py-1 text-xs font-semibold text-aqua-300">
                   {product.code}
