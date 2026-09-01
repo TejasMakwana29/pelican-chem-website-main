@@ -388,13 +388,13 @@ export const products: Product[] = [
 
   // --- BOILER CHEMICAL ---
   {
-    slug: "pelican-blr",
-    name: "Boiler Chemical (PELICAN-BLR)",
-    code: "PELICAN-BLR",
+    slug: "pelican-blr-309",
+    name: "Boiler Antiscalant (PC-BLR-309)",
+    code: "PC-BLR-309",
     category: "Boiler Chemical",
     categorySlug: "boiler-chemical",
     shortDescription: "Advanced Boiler Water Treatment for Cleaner, More Efficient Operations",
-    overview: "PELICAN-BLR is a high-performance boiler treatment chemical designed to prevent scale formation, corrosion, and metal oxide deposits inside industrial boilers. By keeping boiler internals clean, it improves heat transfer efficiency, reduces fuel consumption, and extends the service life of your boiler system.\n\nWhy Choose PELICAN-BLR?\nEven a thin layer of scale inside a boiler can reduce efficiency and increase energy costs. PELICAN-BLR helps maintain clean heat transfer surfaces, ensuring smooth operation, reduced maintenance, and improved boiler reliability.",
+    overview: "PC-BLR-309 is a high-performance boiler treatment chemical designed to prevent scale formation, corrosion, and metal oxide deposits inside industrial boilers. By keeping boiler internals clean, it improves heat transfer efficiency, reduces fuel consumption, and extends the service life of your boiler system.\n\nWhy Choose PC-BLR-309?\nEven a thin layer of scale inside a boiler can reduce efficiency and increase energy costs. PC-BLR-309 helps maintain clean heat transfer surfaces, ensuring smooth operation, reduced maintenance, and improved boiler reliability.",
     benefits: [
       "Prevents scale formation on boiler surfaces",
       "Controls metal ion and metal oxide deposits",
@@ -424,6 +424,138 @@ export const products: Product[] = [
     ],
     image: "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80",
     datasheetUrl: "/Datasheets/PELICAN-BLR.pdf"
+  },
+  {
+  slug: "pelican-blr-301",
+    name: "Oxgygen Sevanger (PC-BLR-OXG-301)",
+    code: "PC-BLR-OXG-301",
+    category: "Boiler Chemical",
+    categorySlug: "boiler-chemical",
+    shortDescription: "Advanced Boiler Water Treatment for Cleaner, More Efficient Operations",
+    overview: "PC-BLR-OXG-301 is a high-performance boiler treatment chemical designed to prevent scale formation, corrosion, and metal oxide deposits inside industrial boilers. By keeping boiler internals clean, it improves heat transfer efficiency, reduces fuel consumption, and extends the service life of your boiler system.\n\nWhy Choose PC-BLR-OXG-301?\nEven a thin layer of scale inside a boiler can reduce efficiency and increase energy costs. PC-BLR-OXG-301 helps maintain clean heat transfer surfaces, ensuring smooth operation, reduced maintenance, and improved boiler reliability.",
+    benefits: [
+      "Prevents scale formation on boiler surfaces",
+      "Controls metal ion and metal oxide deposits",
+      "Helps reduce corrosion inside the boiler",
+      "Improves heat transfer efficiency",
+      "Lowers fuel consumption and operating costs",
+      "Reduces boiler downtime and maintenance",
+      "Extends equipment life",
+      "Suitable for a wide range of industrial boiler systems"
+    ],
+    applications: [
+      "Steam Boilers",
+      "Industrial Boiler Systems",
+      "Textile Industries",
+      "Food & Beverage Processing",
+      "Pharmaceutical Manufacturing",
+      "Chemical Processing Plants",
+      "Paper & Pulp Mills",
+      "Power Plants",
+      "Hotels, Hospitals & Commercial Boiler Systems"
+    ],
+    technicalHighlights: [
+      "Prevents Scale Formation & Controls Corrosion",
+      "Protects Boiler Internals & Extends Boiler Life",
+      "Improves Heat Transfer & Reduces Fuel Consumption",
+      "Reliable Industrial Performance"
+    ],
+    image: "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80",
+    datasheetUrl: "/Datasheets/PELICAN-BLR.pdf"
+  },
+  {
+    slug: "pelican-blr-399",
+    sidebarImage: "/images/RO-dosing.jpg",
+    name: "Boiler Descaling Chemical (PC-BLR-DS1-399)",
+    code: "PC-BLR-DS1-399",
+    category: "RO Dosing Chemicals",
+    categorySlug: "boiler-chemical",
+    shortDescription: "Keep Your RO System Running at Peak Performance",
+    overview: "PC-BLR-DS1-399 is a high-performance High pH RO Antiscalant specially developed to protect reverse osmosis (RO) membranes from scaling and fouling. It helps prevent mineral deposits before they form, allowing your RO plant to operate efficiently, reduce downtime, and extend membrane life. Designed for demanding industrial water treatment applications, PC-BLR-DS1-399 performs exceptionally well even in challenging water conditions with high hardness, silica, and iron content.\n\nWhy Choose PC-BLR-DS1-399?\nInstead of dealing with frequent membrane cleaning and costly maintenance, PC-BLR-DS1-399 continuously protects your RO system by keeping scale-forming minerals dissolved and preventing deposits on membrane surfaces.",
+    benefits: [
+      "Prevents scaling caused by calcium carbonate, calcium sulfate, barium sulfate, strontium sulfate, magnesium salts, silica, iron, and calcium fluoride",
+      "Improves RO system recovery and overall efficiency",
+      "Reduces membrane cleaning frequency and maintenance costs",
+      "Requires low chemical dosage for effective performance",
+      "Helps control iron fouling through sequestration",
+      "Compatible with all major RO membrane brands",
+      "Eliminates the need for hazardous acid dosing in many applications",
+      "Organic, biodegradable formulation for safer operation"
+    ],
+    applications: [
+      "Industrial RO Plants",
+      "Process Water Treatment",
+      "Boiler Feed Water Systems",
+      "Pharmaceutical Industries",
+      "Food & Beverage Plants",
+      "Textile Industry",
+      "Chemical Processing Plants",
+      "Power Plants",
+      "Commercial Water Treatment Systems"
+    ],
+    technicalHighlights: [
+      "LSI up to +2.6",
+      "Iron concentration up to 1.2 ppm (reject stream)",
+      "Silica up to 166 ppm",
+      "High SDI feed water",
+      "Compatible with ALSTAFLOC coagulants and flocculants"
+    ],
+    specifications: [
+      { property: "Appearance", specification: "Colorless to Pale Yellow Liquid" },
+      { property: "pH", specification: "10 – 12" },
+      { property: "Water Solubility", specification: "Completely Soluble" },
+      { property: "Solid Content", specification: "33–34% w/w" },
+      { property: "Specific Gravity", specification: "1.35–1.45" }
+    ],
+    image: "/images/waterplant.jpg",
+    datasheetUrl: "/Datasheets/PELICAN-301.pdf"
+  },
+  {
+    slug: "pelican-blr-306",
+    sidebarImage: "/images/RO-dosing.jpg",
+    name: "Boiler PH Booster (PC-BLR-PH-306)",
+    code: "PC-BLR-PH-306",
+    category: "RO Dosing Chemicals",
+    categorySlug: "boiler-chemical",
+    shortDescription: "Keep Your RO System Running at Peak Performance",
+    overview: "PC-BLR-PH-306 is a high-performance Boiler pH Booster specially developed to elevate and maintain optimal alkalinity in boiler feed water and internal boiler systems. It safely neutralizes acidic conditions before they cause damage, allowing your thermal plant to operate efficiently, reduce downtime, and extend the lifespan of critical heating equipment. Designed for demanding thermal water treatment applications, PC-BLR-PH-306 performs exceptionally well even in challenging water conditions requiring rapid stabilization to protect metal surfaces from acid attack.\n\nWhy Choose PC-BLR-PH-306?\nInstead of dealing with frequent acid-induced corrosion, localized pitting, and costly tube replacements, PC-BLR-PH-306 continuously protects your boiler system by optimizing pH levels and maintaining a stable, non-corrosive environment for your boiler internals and condensate lines.",
+    benefits: [
+      "Prevents scaling caused by calcium carbonate, calcium sulfate, barium sulfate, strontium sulfate, magnesium salts, silica, iron, and calcium fluoride",
+      "Improves RO system recovery and overall efficiency",
+      "Reduces membrane cleaning frequency and maintenance costs",
+      "Requires low chemical dosage for effective performance",
+      "Helps control iron fouling through sequestration",
+      "Compatible with all major RO membrane brands",
+      "Eliminates the need for hazardous acid dosing in many applications",
+      "Organic, biodegradable formulation for safer operation"
+    ],
+    applications: [
+      "Industrial RO Plants",
+      "Process Water Treatment",
+      "Boiler Feed Water Systems",
+      "Pharmaceutical Industries",
+      "Food & Beverage Plants",
+      "Textile Industry",
+      "Chemical Processing Plants",
+      "Power Plants",
+      "Commercial Water Treatment Systems"
+    ],
+    technicalHighlights: [
+      "LSI up to +2.6",
+      "Iron concentration up to 1.2 ppm (reject stream)",
+      "Silica up to 166 ppm",
+      "High SDI feed water",
+      "Compatible with ALSTAFLOC coagulants and flocculants"
+    ],
+    specifications: [
+      { property: "Appearance", specification: "Colorless to Pale Yellow Liquid" },
+      { property: "pH", specification: "10 – 12" },
+      { property: "Water Solubility", specification: "Completely Soluble" },
+      { property: "Solid Content", specification: "33–34% w/w" },
+      { property: "Specific Gravity", specification: "1.35–1.45" }
+    ],
+    image: "/images/waterplant.jpg",
+    datasheetUrl: "/Datasheets/PELICAN-301.pdf"
   },
 
   // --- RO DESCALING CHEMICALS ---
