@@ -158,7 +158,7 @@ export const products: Product[] = [
       { property: "Specific Gravity", specification: "1.35–1.45" }
     ],
     image: "/images/Pelican-301.png",
-    datasheetUrl: "/Datasheets/PELICAN-301.pdf"
+    datasheetUrl: "/Datasheets/PELICAN-301.pdf",
     
 
   },
@@ -294,7 +294,7 @@ export const products: Product[] = [
       { property: "Specific Gravity", specification: "1.17–1.23" }
     ],
     image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80",
-    datasheetUrl: "/downloads/PELICAN-399-TDS.pdf"
+    datasheetUrl: "/Datasheets/PELICAN-309.pdf"
   },
   
   // --- ETP ---
@@ -343,7 +343,7 @@ export const products: Product[] = [
       { property: "Viscosity", specification: "Approximately 30–130 cPs" }
     ],
     image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
-    datasheetUrl: "/Datasheets/ETP-PELICAN-101.pdf"
+    datasheetUrl: "/Datasheets/PELICAN-101-ETP-Chemical.pdf"
   },
 
   // --- EDTA ---
@@ -383,7 +383,7 @@ export const products: Product[] = [
       "Available in Multiple Pack Sizes"
     ],
     image: "https://images.unsplash.com/photo-1532187863486-abf9db3881b5?w=800&q=80",
-    //datasheetUrl: "/downloads/EDTA-TDS.pdf"
+    datasheetUrl: "/Datasheets/PELICAN-EDTA.pdf"
   },
 
   // --- BOILER CHEMICAL ---
@@ -461,7 +461,7 @@ export const products: Product[] = [
       "Reliable Industrial Performance"
     ],
     image: "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80",
-    datasheetUrl: "/Datasheets/PELICAN-BLR.pdf"
+    datasheetUrl: "/Datasheets/PELICAN-BLR-Oxgygen-Sevanger.pdf"
   },
   {
     slug: "pelican-blr-399",
@@ -508,7 +508,7 @@ export const products: Product[] = [
       { property: "Specific Gravity", specification: "1.35–1.45" }
     ],
     image: "/images/waterplant.jpg",
-    datasheetUrl: "/Datasheets/PELICAN-301.pdf"
+    datasheetUrl: "/Datasheets/PELICAN-BLR.pdf"
   },
   {
     slug: "pelican-blr-306",
@@ -555,7 +555,7 @@ export const products: Product[] = [
       { property: "Specific Gravity", specification: "1.35–1.45" }
     ],
     image: "/images/waterplant.jpg",
-    datasheetUrl: "/Datasheets/PELICAN-301.pdf"
+    datasheetUrl: "/Datasheets/PELICAN-BLR-PH.pdf"
   },
 
   // --- RO DESCALING CHEMICALS ---
@@ -709,7 +709,7 @@ export const products: Product[] = [
       "Reliable Performance Across Multiple Applications"
     ],
     image: "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80",
-    datasheetUrl: "/Datasheets/PELICAN-AHU.pdf"
+    datasheetUrl: "/Datasheets/PELICAN-AHU_FCU.pdf"
   },
 
   // --- COOLING TOWER ---
@@ -784,7 +784,7 @@ export const products: Product[] = [
       "Suitable for Open & Recirculating Cooling Systems"
     ],
     image: "https://images.unsplash.com/photo-1581093458791-9f3023e2d2b8?w=800&q=80",
-    datasheetUrl: "/Datasheets/PELICAN-CT.pdf"
+    datasheetUrl: "/Datasheets/PELICAN-CT-Micro-Biocide-Chemical.pdf"
   },
   {
     slug: "pc-ct-alg-306",
@@ -820,7 +820,7 @@ export const products: Product[] = [
       "Suitable for Open & Recirculating Cooling Systems"
     ],
     image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
-    datasheetUrl: "/Datasheets/PELICAN-CT.pdf"
+    datasheetUrl: "/Datasheets/PELICAN-CT-Algae-Preventive.pdf"
   },
   {
     slug: "pc-ct-ds1-399",
@@ -856,7 +856,7 @@ export const products: Product[] = [
       "Suitable for Open & Recirculating Cooling Systems"
     ],
     image: "https://images.unsplash.com/photo-1532187863486-abf9db3881b5?w=800&q=80",
-    datasheetUrl: "/Datasheets/PELICAN-CT.pdf"
+    datasheetUrl: "/Datasheets/PELICAN-CT-PH.pdf"
   },
   {
     slug: "PH-booster",
@@ -889,7 +889,7 @@ export const products: Product[] = [
       "High solubility multiplier for carbonate-based mineral buildup"
     ],
     image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80",
-    datasheetUrl: "/Datasheets/PELICAN-CT.pdf"
+    datasheetUrl: "/Datasheets/PELICAN-CT-PH.pdf"
   },
 
   // --- DESCALING CHEMICAL ---
@@ -931,7 +931,7 @@ export const products: Product[] = [
       "Reliable Performance Across Multiple Applications"
     ],
     image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
-    datasheetUrl: "/Datasheets/Descaling-Chemical.pdf"
+    datasheetUrl: "/Datasheets/PELICAN-AM-DS-399.pdf"
   },
 
   /*
@@ -1010,7 +1010,7 @@ export const products: Product[] = [
       "Real-time water quality monitoring (TDS/pH sensors)"
     ],
     image: "/images/OSMOSIS.webp",
-    datasheetUrl: "/Datasheets/Industrial-RO-System.pdf"
+    datasheetUrl: "/sheets/Industrial-RO-System.pdf"
   },
 ];
 
