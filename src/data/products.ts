@@ -115,7 +115,7 @@ export const products: Product[] = [
   // --- RO DOSING CHEMICALS ---
   {
     slug: "pelican-antiscalant-301",
-    sidebarImage: "/images/RO-dosing.jpg",
+    sidebarImage: "/images/Pelican-301.png",
     name: "High pH RO Antiscalant (PELICAN-301)",
     code: "PELICAN-301",
     category: "RO Dosing Chemicals",
@@ -157,7 +157,7 @@ export const products: Product[] = [
       { property: "Solid Content", specification: "33–34% w/w" },
       { property: "Specific Gravity", specification: "1.35–1.45" }
     ],
-    image: "https://images.unsplash.com/photo-1581093458791-9f3023e2d2b8?w=800&q=80",
+    image: "/images/Pelican-301.png",
     datasheetUrl: "/Datasheets/PELICAN-301.pdf"
     
 
@@ -865,32 +865,28 @@ export const products: Product[] = [
     category: "Cooling Tower Chemical",
     categorySlug: "cooling-tower",
     shortDescription: "A dual-action treatment that prevents scale buildup while protecting metal components from corrosion.",
-    overview: "Pelican Chemical offers a comprehensive range of Cooling Tower Chemicals designed to protect industrial cooling systems from the three most common problems—scale formation, corrosion, and microbial growth. PC CT SC1 309 is a dual-action treatment that prevents scale buildup while protecting metal components from corrosion, ensuring maximum cooling efficiency.",
+    overview: "PH BOOSTER is a specially formulated cooling tower descaling and cleaning chemical designed to help remove calcium carbonate, mineral scale, rust deposits and other accumulated deposits from cooling towers, heat exchangers and recirculating cooling-water systems.\n\nThe product helps restore efficient heat transfer by loosening and dissolving deposits that accumulate on heat-transfer surfaces. Controlled chemical descaling can improve system cleanliness, reduce heat-transfer losses and support reliable cooling tower operation. Acid-based cooling-water treatment is commonly used to lower pH and increase the solubility of carbonate scale.",
     benefits: [
-      "Prevents scale and mineral deposits",
-      "Protects metal surfaces from corrosion",
-      "Improves heat transfer efficiency",
-      "Reduces maintenance and cleaning frequency",
-      "Extends the service life of cooling tower equipment",
-      "Optimizes water usage and system performance"
+      "Actively removes calcium carbonate, rust, and mineral scale deposits",
+      "Restores efficient heat transfer by dissolving accumulated buildup",
+      "Improves overall system cleanliness and water flow",
+      "Significantly reduces heat-transfer energy losses",
+      "Increases the solubility of carbonate scale by effectively lowering pH",
+      "Supports highly reliable and consistent cooling tower operation"
     ],
     applications: [
-      "Industrial Cooling Towers",
-      "HVAC Cooling Systems",
-      "Power Plants",
-      "Chemical Processing Industries",
-      "Pharmaceutical Manufacturing",
-      "Food & Beverage Processing",
-      "Textile & Petrochemical Plants",
-      "Commercial Chiller Systems",
-      "Manufacturing Facilities"
+      "Industrial and commercial cooling towers",
+      "Heavily scaled heat exchangers",
+      "Recirculating cooling-water systems",
+      "Systems requiring controlled acid-based chemical descaling",
+      "Facilities experiencing heat-transfer losses due to mineral deposits"
     ],
     technicalHighlights: [
-      "Complete Cooling Water Treatment Program",
-      "Scale & Corrosion Protection",
-      "Restores Heat Transfer Efficiency",
-      "Reduces Maintenance Costs & Extends Equipment Life",
-      "Suitable for Open & Recirculating Cooling Systems"
+      "Acid-based formulation designed to rapidly lower pH",
+      "Targeted chemical action to loosen and dissolve stubborn rust and scale",
+      "Controlled descaling mechanism for safe deposit removal",
+      "Specifically engineered for scaled heat-transfer surfaces",
+      "High solubility multiplier for carbonate-based mineral buildup"
     ],
     image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80",
     datasheetUrl: "/Datasheets/PELICAN-CT.pdf"

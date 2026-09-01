@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Download, Mail } from "lucide-react"; // Added Mail icon
+import { ArrowRight, Download, Mail, User, Phone } from "lucide-react";
 import { useState } from "react";
 
 interface InquiryFormProps {
@@ -321,14 +321,19 @@ interface DownloadFormProps {
 }
 
 export function DownloadForm({ onSuccess }: DownloadFormProps) {
-  const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
     setError("");
+
+    // Grab all the input values automatically
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get("name") as string;
+    const phone = formData.get("phone") as string;
+    const email = formData.get("email") as string;
 
     try {
       // Pointing to your existing API route
@@ -338,12 +343,11 @@ export function DownloadForm({ onSuccess }: DownloadFormProps) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          // Defaulting required fields so the API doesn't fail
-          name: "Certificate Download Request",
-          phone: "N/A", 
-          company: "Download Gateway",
+          name: name,
+          phone: phone, 
+          company: "Download Gateway", // Keeps the subject line organized in your inbox
           email: email,
-          message: `A visitor has requested certificate download access. Email provided: ${email}`,
+          message: `${name} (${phone}) has requested certificate download access. Email provided: ${email}`,
         }),
       });
 
@@ -362,6 +366,39 @@ export function DownloadForm({ onSuccess }: DownloadFormProps) {
 
   return (
     <form onSubmit={handleSubmit} className="mt-8 space-y-4">
+      {/* Name Field */}
+      <div>
+        <label htmlFor="download-name" className="sr-only">Full Name</label>
+        <div className="relative">
+          <User className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400" />
+          <input
+            type="text"
+            id="download-name"
+            name="name"
+            required
+            placeholder="Enter your full name"
+            className="w-full rounded-xl border border-slate-300 py-3 pl-12 pr-4 outline-none transition-colors focus:border-aqua focus:ring-1 focus:ring-aqua"
+          />
+        </div>
+      </div>
+
+      {/* Phone Field */}
+      <div>
+        <label htmlFor="download-phone" className="sr-only">Phone Number</label>
+        <div className="relative">
+          <Phone className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400" />
+          <input
+            type="tel"
+            id="download-phone"
+            name="phone"
+            required
+            placeholder="Enter your phone number"
+            className="w-full rounded-xl border border-slate-300 py-3 pl-12 pr-4 outline-none transition-colors focus:border-aqua focus:ring-1 focus:ring-aqua"
+          />
+        </div>
+      </div>
+
+      {/* Email Field */}
       <div>
         <label htmlFor="download-email" className="sr-only">Email Address</label>
         <div className="relative">
@@ -369,10 +406,9 @@ export function DownloadForm({ onSuccess }: DownloadFormProps) {
           <input
             type="email"
             id="download-email"
+            name="email"
             required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email address"
+            placeholder="Enter your business email"
             className="w-full rounded-xl border border-slate-300 py-3 pl-12 pr-4 outline-none transition-colors focus:border-aqua focus:ring-1 focus:ring-aqua"
           />
         </div>
