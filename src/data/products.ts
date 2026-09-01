@@ -157,8 +157,8 @@ export const products: Product[] = [
       { property: "Solid Content", specification: "33–34% w/w" },
       { property: "Specific Gravity", specification: "1.35–1.45" }
     ],
-    image: "/images/Pelican-301.png",
-    datasheetUrl: "/Datasheets/PELICAN-301.pdf",
+    image: "/photos/Pelican 301.png",
+    datasheetUrl: "/sheets/PELICAN-301.pdf",
     
 
   },
@@ -207,8 +207,8 @@ export const products: Product[] = [
       { property: "Solid Content", specification: "33–34% w/w" },
       { property: "Specific Gravity", specification: "1.17–1.23" }
     ],
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
-    datasheetUrl: "/Datasheets/PELICAN-309.pdf"
+    image: "/photos/Pelican 309.png",
+    datasheetUrl: "/sheets/PELICAN-309.pdf",
   },
 
   {
@@ -247,8 +247,8 @@ export const products: Product[] = [
       "High chloride water conditions",
       "Advanced formulation includes biocide support to help control unpleasant odours"
     ],
-    image: "https://images.unsplash.com/photo-1532187863486-abf9db3881b5?w=800&q=80",
-    datasheetUrl: "/Datasheets/PELICAN-309.pdf"
+    image: "/photos/Pelican 309 H_S.png",
+    datasheetUrl: "/sheets/PELICAN-309.pdf"
   },
 
   // --- SEA WATER ---
@@ -293,8 +293,8 @@ export const products: Product[] = [
       { property: "Solid Content", specification: "33–34% w/w" },
       { property: "Specific Gravity", specification: "1.17–1.23" }
     ],
-    image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80",
-    datasheetUrl: "/Datasheets/PELICAN-309.pdf"
+    image: "/photos/Pelican 399.png",
+    datasheetUrl: "/sheets/PELICAN-399.pdf"
   },
   
   // --- ETP ---
@@ -342,8 +342,8 @@ export const products: Product[] = [
       { property: "Solid Content", specification: "Minimum 50%" },
       { property: "Viscosity", specification: "Approximately 30–130 cPs" }
     ],
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
-    datasheetUrl: "/Datasheets/PELICAN-101-ETP-Chemical.pdf"
+    image: "/photos/PC 101 ETP Chemical.png",
+    datasheetUrl: "/sheets/PELICAN-101-ETP-Chemical.pdf"
   },
 
   // --- EDTA ---
@@ -382,8 +382,8 @@ export const products: Product[] = [
       "Stable Chemical Composition & Long Shelf Life",
       "Available in Multiple Pack Sizes"
     ],
-    image: "https://images.unsplash.com/photo-1532187863486-abf9db3881b5?w=800&q=80",
-    datasheetUrl: "/Datasheets/PELICAN-EDTA.pdf"
+    image: "/photos/Pelican EDTA.png",
+    datasheetUrl: "/sheets/PELICAN-EDTA.pdf"
   },
 
   // --- BOILER CHEMICAL ---
@@ -422,8 +422,8 @@ export const products: Product[] = [
       "Improves Heat Transfer & Reduces Fuel Consumption",
       "Reliable Industrial Performance"
     ],
-    image: "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80",
-    datasheetUrl: "/Datasheets/PELICAN-BLR.pdf"
+    image: "/photos/Boiler Antiscalant (PC-BLR-309).png",
+    datasheetUrl: "/sheets/PELICAN-BLR.pdf"
   },
   {
   slug: "pelican-blr-301",
@@ -460,12 +460,12 @@ export const products: Product[] = [
       "Improves Heat Transfer & Reduces Fuel Consumption",
       "Reliable Industrial Performance"
     ],
-    image: "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80",
-    datasheetUrl: "/Datasheets/PELICAN-BLR-Oxgygen-Sevanger.pdf"
+    image: "/photos/Oxgygen Sevanger (PC-BLR-OXG-301).png",
+    datasheetUrl: "/sheets/PELICAN-BLR-Oxgygen-Sevanger.pdf"
   },
   {
     slug: "pelican-blr-399",
-    sidebarImage: "/images/RO-dosing.jpg",
+    sidebarImage:"/photos/Boiler Descaling Chemical (PC-BLR-DS1-399).png",
     name: "Boiler Descaling Chemical (PC-BLR-DS1-399)",
     code: "PC-BLR-DS1-399",
     category: "RO Dosing Chemicals",
@@ -507,12 +507,11 @@ export const products: Product[] = [
       { property: "Solid Content", specification: "33–34% w/w" },
       { property: "Specific Gravity", specification: "1.35–1.45" }
     ],
-    image: "/images/waterplant.jpg",
-    datasheetUrl: "/Datasheets/PELICAN-BLR.pdf"
+    image: "/photos/Boiler Descaling Chemical (PC-BLR-DS1-399).png",
+    datasheetUrl: "/sheets/PELICAN-BLR.pdf"
   },
   {
     slug: "pelican-blr-306",
-    sidebarImage: "/images/RO-dosing.jpg",
     name: "Boiler PH Booster (PC-BLR-PH-306)",
     code: "PC-BLR-PH-306",
     category: "RO Dosing Chemicals",
@@ -554,8 +553,8 @@ export const products: Product[] = [
       { property: "Solid Content", specification: "33–34% w/w" },
       { property: "Specific Gravity", specification: "1.35–1.45" }
     ],
-    image: "/images/waterplant.jpg",
-    datasheetUrl: "/Datasheets/PELICAN-BLR-PH.pdf"
+    image: "/photos/Boiler PH Booster (PC-BLR-PH-306).png",
+    datasheetUrl: "/sheets/PELICAN-BLR-PH.pdf"
   },
 
   // --- RO DESCALING CHEMICALS ---
@@ -591,8 +590,8 @@ export const products: Product[] = [
       "Reduces Cleaning Time & Improves Water Recovery",
       "Important Note: Do not use on cellulose acetate membranes"
     ],
-    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
-    datasheetUrl: "/Datasheets/PELICAN-RO Cleaner.pdf"
+    image: "/photos/RO Descaling Chemicals.png",
+    datasheetUrl: "/sheets/PELICAN-RO Cleaner.pdf"
   },
   {
     slug: "pelican-ds-l17",
@@ -624,8 +623,8 @@ export const products: Product[] = [
       "Safe for Thin-Film Composite Membranes",
       "Important Note: Do not use on cellulose acetate membranes"
     ],
-    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
-    datasheetUrl: "/Datasheets/PELICAN-RO Cleaner.pdf"
+    image: "/photos/RO Descaling Chemicals.png",
+    datasheetUrl: "/sheets/PELICAN-RO Cleaner.pdf"
   },
 
   // --- CHILLER CHEMICALS ---
@@ -666,8 +665,8 @@ export const products: Product[] = [
       "Easy-to-Apply Formulation & Cost-Effective Industrial Cleaning",
       "Reliable Performance Across Multiple Applications"
     ],
-    image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80",
-    datasheetUrl: "/Datasheets/PELICAN-CHL 107.pdf"
+    image: "/photos/PC CHL 107.png",
+    datasheetUrl: "/sheets/PELICAN-CHL 107.pdf"
   },
 
   // --- AHU / FCU ---
@@ -708,8 +707,8 @@ export const products: Product[] = [
       "Easy-to-Apply Formulation & Cost-Effective Industrial Cleaning",
       "Reliable Performance Across Multiple Applications"
     ],
-    image: "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80",
-    datasheetUrl: "/Datasheets/PELICAN-AHU_FCU.pdf"
+    image: "/photos/AHU Chemical.png",
+    datasheetUrl: "/sheets/PELICAN-AHU_FCU.pdf"
   },
 
   // --- COOLING TOWER ---
@@ -747,8 +746,8 @@ export const products: Product[] = [
       "Reduces Maintenance Costs & Extends Equipment Life",
       "Suitable for Open & Recirculating Cooling Systems"
     ],
-    image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80",
-    datasheetUrl: "/Datasheets/PELICAN-CT.pdf"
+    image: "/photos/PC CT SC1 309.png",
+    datasheetUrl: "/sheets/PELICAN-CT.pdf"
   },
   {
     slug: "pc-ct-mb1-301",
@@ -783,8 +782,8 @@ export const products: Product[] = [
       "Reduces Maintenance Costs & Extends Equipment Life",
       "Suitable for Open & Recirculating Cooling Systems"
     ],
-    image: "https://images.unsplash.com/photo-1581093458791-9f3023e2d2b8?w=800&q=80",
-    datasheetUrl: "/Datasheets/PELICAN-CT-Micro-Biocide-Chemical.pdf"
+    image: "/photos/Pelican 301 Micro biocide.png",
+    datasheetUrl: "/sheets/PELICAN-CT-Micro-Biocide-Chemical.pdf"
   },
   {
     slug: "pc-ct-alg-306",
@@ -819,8 +818,8 @@ export const products: Product[] = [
       "Reduces Maintenance Costs & Extends Equipment Life",
       "Suitable for Open & Recirculating Cooling Systems"
     ],
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
-    datasheetUrl: "/Datasheets/PELICAN-CT-Algae-Preventive.pdf"
+    image: "/photos/Pelican 306 Algaecide.png",
+    datasheetUrl: "/sheets/PELICAN-CT-Algae-Preventive.pdf"
   },
   {
     slug: "pc-ct-ds1-399",
@@ -855,8 +854,8 @@ export const products: Product[] = [
       "Reduces Maintenance Costs & Extends Equipment Life",
       "Suitable for Open & Recirculating Cooling Systems"
     ],
-    image: "https://images.unsplash.com/photo-1532187863486-abf9db3881b5?w=800&q=80",
-    datasheetUrl: "/Datasheets/PELICAN-CT-PH.pdf"
+    image: "/photos/Cooling Tower Descaling Chemical – PC CT DS1 399 PH Booster Chemical.png",
+    datasheetUrl: "/sheets/PELICAN-CT-PH.pdf"
   },
   {
     slug: "PH-booster",
@@ -888,8 +887,8 @@ export const products: Product[] = [
       "Specifically engineered for scaled heat-transfer surfaces",
       "High solubility multiplier for carbonate-based mineral buildup"
     ],
-    image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80",
-    datasheetUrl: "/Datasheets/PELICAN-CT-PH.pdf"
+    image: "/photos/Cooling Tower Descaling Chemical – PC CT DS1 399 PH Booster Chemical.png",
+    datasheetUrl: "/sheets/PELICAN-CT-PH.pdf"
   },
 
   // --- DESCALING CHEMICAL ---
@@ -930,8 +929,8 @@ export const products: Product[] = [
       "Easy-to-Apply Formulation & Cost-Effective Industrial Cleaning",
       "Reliable Performance Across Multiple Applications"
     ],
-    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
-    datasheetUrl: "/Datasheets/PELICAN-AM-DS-399.pdf"
+    image: "/photos/PELICAN-AM DS 399.png",
+    datasheetUrl: "/sheets/PELICAN-AM-DS-399.pdf"
   },
 
   /*
