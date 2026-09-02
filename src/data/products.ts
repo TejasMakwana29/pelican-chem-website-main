@@ -385,7 +385,6 @@ export const products: Product[] = [
     image: "/photos/EDTA.png",
     datasheetUrl: "/sheets/PELICAN-EDTA-2.pdf"
   },
-
   // --- BOILER CHEMICAL ---
   {
     slug: "pelican-blr-309",
@@ -854,8 +853,8 @@ export const products: Product[] = [
       "Reduces Maintenance Costs & Extends Equipment Life",
       "Suitable for Open & Recirculating Cooling Systems"
     ],
-    image: "/photos/Cooling Tower Descaling Chemical – PC CT DS1 399 PH Booster Chemical.png",
-    datasheetUrl: "/sheets/PELICAN-CT-PH.pdf"
+    image: "/photos/PC-CT-DS1-399.png",
+    datasheetUrl: "/sheets/PELICAN-AM-DS-399.pdf"
   },
   {
     slug: "PH-booster",
@@ -888,7 +887,7 @@ export const products: Product[] = [
       "High solubility multiplier for carbonate-based mineral buildup"
     ],
     image: "/photos/Cooling Tower Descaling Chemical – PC CT DS1 399 PH Booster Chemical.png",
-    datasheetUrl: "/sheets/PELICAN-CT-PH.pdf"
+    datasheetUrl: "/sheets/PELICAN-CT PH.pdf"
   },
 
   // --- DESCALING CHEMICAL ---
