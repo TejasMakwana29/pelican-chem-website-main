@@ -382,8 +382,8 @@ export const products: Product[] = [
       "Stable Chemical Composition & Long Shelf Life",
       "Available in Multiple Pack Sizes"
     ],
-    image: "/photos/Pelican EDTA.png",
-    datasheetUrl: "/sheets/PELICAN-EDTA.pdf"
+    image: "/photos/EDTA.png",
+    datasheetUrl: "/sheets/PELICAN-EDTA-2.pdf"
   },
 
   // --- BOILER CHEMICAL ---
